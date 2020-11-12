@@ -13,8 +13,8 @@ Install Vagrant (https://www.vagrantup.com/downloads)
 **Run dev environment**
 
 1. Clone the main decidim project https://gitlab.webface.at/decidimaustria/decidim
-2. Inside of the main project clone this (decidimaustria) project
-3. Run:
+2. Inside of the main project: clone this (decidimaustria) project
+3. And run Vagrant:
 ```bash
 vagrant up
 vagrant ssh
