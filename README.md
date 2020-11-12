@@ -1,8 +1,27 @@
-# vagrant_development_app
+# decidim austria
 
 Free Open-Source participatory democracy, citizen participation and open government for cities and organizations
 
-This is the open-source repository for vagrant_development_app, based on [Decidim](https://github.com/decidim/decidim).
+This is the open-source repository for decidim austria, based on [Decidim](https://github.com/decidim/decidim).
+
+## Running dev environment using Vagrant
+
+**Prerequisites**
+
+Install Vagrant (https://www.vagrantup.com/downloads)
+
+**Run dev environment**
+
+1. Clone the main decidim project https://gitlab.webface.at/decidimaustria/decidim
+2. Inside of the main project clone this (decidimaustria) project
+3. Run:
+```bash
+vagrant up
+vagrant ssh
+cd /vagrant/decidimaustria/
+rails s -b 0.0.0.0
+```
+4. Open URL in Browser: http://localhost:4567
 
 ## Setting up the application
 
