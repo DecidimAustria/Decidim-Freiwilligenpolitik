@@ -1,0 +1,10 @@
+{
+  "name": "decidim.austria",
+  "description": "decidim austria",
+  "keywords": [],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
