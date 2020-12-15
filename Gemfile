@@ -2,14 +2,16 @@
 
 source "https://rubygems.org"
 
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.22-stable" }
+
 ruby RUBY_VERSION
 
-gem "decidim", path: ".."
-gem "decidim-conferences", path: ".."
-gem "decidim-consultations", path: ".."
-gem "decidim-elections", path: ".."
-gem "decidim-initiatives", path: ".."
-gem "decidim-templates", path: ".."
+gem "decidim", DECIDIM_VERSION
+gem "decidim-conferences", DECIDIM_VERSION
+gem "decidim-consultations", DECIDIM_VERSION
+gem "decidim-elections", DECIDIM_VERSION
+gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-templates", DECIDIM_VERSION
 
 gem "bootsnap", "~> 1.4"
 
@@ -26,7 +28,7 @@ group :development, :test do
   # See https://github.com/decidim/decidim/issues/6230
   gem "simplecov", "~> 0.19.0"
 
-  gem "decidim-dev", path: ".."
+  gem "decidim-dev", DECIDIM_VERSION
 end
 
 group :development do
