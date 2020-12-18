@@ -23,6 +23,14 @@ rails s -b 0.0.0.0
 ```
 4. Open URL in Browser: http://localhost:4567
 
+## Deploying to dokku
+
+**E-Mail Settings**
+
+For E-Mails to work it seems we have to configure smtp settings in the environment and also in the admin interface for the organizations.
+
+dokku config:set staging SMTP_USERNAME=xxx SMTP_PASSWORD='XXXX' SMTP_ADDRESS=mail.xxx.xx SMTP_DOMAIN=xxx.xx
+
 ## Setting up the application
 
 You will need to do some steps before having the app working properly once you've deployed it:
