@@ -19,6 +19,7 @@ gem "puma", ">= 4.3.5"
 gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 2.14"
+gem "sidekiq"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -37,4 +38,15 @@ group :development do
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 3.5"
+  gem "rubocop"
+end
+
+group :production do
+  gem "sentry-raven"
+  gem "rails_12factor"
+end
+
+group :test do
+  gem "rspec-rails"
+  gem "database_cleaner"
 end
