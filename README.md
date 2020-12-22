@@ -12,9 +12,21 @@ Install Vagrant (https://www.vagrantup.com/downloads)
 
 **Run dev environment**
 
-1. Clone the main decidim project https://gitlab.webface.at/decidimaustria/decidim
-2. Inside of the main project: clone this (decidimaustria) project
-3. And run Vagrant:
+**Docker**
+
+Attention:
+
+In v0.23.1 db:seed will fail because of a bug:
+  https://github.com/decidim/decidim/issues/7057
+
+```bash
+docker-compose build
+docker-compose run --rm app bundle exec rake db:create db:schema:load db:seed
+docker-compose up
+```
+
+**Vagrant**
+
 ```bash
 vagrant up
 vagrant ssh
