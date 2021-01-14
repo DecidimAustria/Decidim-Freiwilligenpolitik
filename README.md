@@ -59,3 +59,13 @@ user.save!
 6. Fill the rest of the form and submit it.
 
 You're good to go!
+
+## Updates
+
+To update decidim to the lastest version:
+
+```
+bundle update decidim
+bin/rails decidim:upgrade
+bin/rails db:migrate
+```
