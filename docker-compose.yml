@@ -1,26 +1,157 @@
-version: '3'
+version: '3.2'
+
+x-app: &app
+  build:
+    context: .dockerdev
+    dockerfile: Dockerfile
+    args:
+      RUBY_VERSION: '2.7.1'
+      PG_MAJOR: '12'
+      NODE_MAJOR: '12'
+      YARN_VERSION: '1.22.5'
+      BUNDLER_VERSION: '2.0.1'
+  environment: &env
+    NODE_ENV: development
+    RAILS_ENV: ${RAILS_ENV:-development}
+  image: decidim-dev:1.0.0
+  tmpfs:
+    - /tmp
+    - /app/tmp/pids/
+
+x-backend: &backend
+  <<: *app
+  stdin_open: true
+  tty: true
+  volumes:
+    - .:/app:cached
+    - rails_cache:/app/tmp/cache
+    - bundle:/usr/local/bundle
+    - node_modules:/app/node_modules
+    - packs:/app/public/packs
+    - .dockerdev/.psqlrc:/root/.psqlrc:ro
+    - .dockerdev/.bashrc:/root/.bashrc:ro
+  environment:
+    <<: *env
+    DATABASE_URL: postgres://postgres:postgres@postgres/devdb
+    STRIPE_ENABLED: "true"
+    EDITOR: vim
+    WEBPACKER_DEV_SERVER_HOST: webpacker
+    #WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+    BOOTSNAP_CACHE_DIR: /usr/local/bundle/_bootsnap
+    HISTFILE: /app/log/.bash_history
+    PSQL_HISTFILE: /app/log/.psql_history
+    WEB_CONCURRENCY: 1
+    REDIS_URL: "redis://redis:6379/"
+    #BUNDLE_PATH: /bundle/vendor
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
 services:
-  app:
-    image: decidim/decidim:0.23.1
-    volumes:
-      - .:/app
-      - bundle:/usr/local/bundle
-      - node_modules:/app/node_modules
-    environment:
-      - PORT=3000
-      - DATABASE_HOST=pg
-      - DATABASE_USERNAME=postgres
-      - RAILS_ENV=development
+  runner:
+    <<: *backend
+    command: /bin/bash
     ports:
-      - 3000:3000
-    links:
-      - pg
-    command: bundle exec puma
-  pg:
-    image: postgres
+      - '3000'
+      - '3002'
+
+  tests:
+    <<: *backend
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres/testdb
+      RAILS_ENV: test
+    command: /bin/bash
+    # The following lines work but the container gets always started with dcup
+    #command: bash -c "
+    #  bundle exec rails db:drop db:create || true
+    #  && bundle exec rails test:db"
+
+  rails:
+    <<: *backend
+    command: bundle exec rails server -p 3000 -b '0.0.0.0'
+    ports:
+      - '3000'
+    networks:
+      - default
+      - devproxynet
+    labels:
+      #- "traefik.http.routers.app-decidimweb.rule=Host(`decidim.localtest.me`)"
+      - "traefik.enable=true"
+      - "traefik.docker.network=devproxynet"
+      - "traefik.http.services.decidim-web-service.loadbalancer.server.port=3000"
+      - "traefik.http.routers.decidimweb.rule=Host(`decidim.localtest.me`)"
+      - "traefik.http.routers.decidimweb.entrypoints=http"
+      - "traefik.http.routers.decidimweb.service=decidim-web-service"
+
+#  sidekiq:
+#    <<: *backend
+#    #command: bundle exec sidekiq -C config/sidekiq.yml
+#    command: bundle exec sidekiq
+
+  postgres:
+    image: postgres:12
     volumes:
-      - pg-data:/var/lib/postgresql/data
+      - .dockerdev/.psqlrc:/root/.psqlrc:ro
+      - postgres:/var/lib/postgresql/data
+      - ./log:/root/log:cached
+    environment:
+      PSQL_HISTFILE: /root/log/.psql_history
+      POSTGRES_DB: devdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432
+    healthcheck:
+      test: pg_isready -U postgres -h 127.0.0.1
+      interval: 5s
+
+  redis:
+    image: redis:6-alpine
+    volumes:
+      - redis:/data
+    ports:
+      - 6379
+    healthcheck:
+      test: redis-cli ping
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+#  webpacker:
+#    <<: *app
+#    command: bundle exec ./bin/webpack-dev-server
+#    ports:
+#      - '3035'
+#    volumes:
+#      - .:/app:cached
+#      - bundle:/usr/local/bundle
+#      - node_modules:/app/node_modules
+#      - packs:/app/public/packs
+#    environment:
+#      <<: *env
+#      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+#    networks:
+#      - default
+#      - devproxynet
+#    labels:
+#      - "traefik.enable=true"
+#      - "traefik.docker.network=devproxynet"
+#      - "traefik.http.services.decidim-webpacker-service.loadbalancer.server.port=3035"
+#      - "traefik.http.routers.decidimwebpacker.rule=Host(`decidim.localtest.me`) && PathPrefix(`/sockjs-node`)"
+#      - "traefik.http.routers.decidimwebpacker.entrypoints=http"
+#      - "traefik.http.routers.decidimwebpacker.service=decidim-webpacker-service"
+
 volumes:
-  node_modules: {}
-  bundle: {}
-  pg-data: {}
+  postgres:
+  redis:
+  bundle:
+  node_modules:
+  rails_cache:
+  packs:
+
+networks:
+  devproxynet:
+    external:
+      name: devproxynet
