@@ -174,7 +174,7 @@ Decidim.configure do |config|
   #   end
   # end
   #
-  config.sms_gateway_service = 'Decidim::Verifications::Sms::ExampleGateway'
+  # config.sms_gateway_service = "MySMSGatewayService"
 
   # Timestamp service configuration
   #
@@ -198,7 +198,7 @@ Decidim.configure do |config|
   #   end
   # end
   #
-  config.timestamp_service = "Decidim::Initiatives::DummyTimestamp"
+  # config.timestamp_service = "MyTimestampService"
 
   # PDF signature service configuration
   #
@@ -221,7 +221,7 @@ Decidim.configure do |config|
   #   end
   # end
   #
-  config.pdf_signature_service = "Decidim::Initiatives::PdfSignatureExample"
+  # config.pdf_signature_service = "MyPDFSignatureService"
 
   # Etherpad configuration
   #
@@ -273,7 +273,7 @@ Decidim.configure do |config|
   #   end
   # end
   #
-  config.machine_translation_service = 'Decidim::Dev::DummyTranslator'
+  # config.machine_translation_service = "MyTranslationService"
 
   # Defines the name of the cookie used to check if the user allows Decidim to
   # set cookies.

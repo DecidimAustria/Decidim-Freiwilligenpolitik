@@ -2,34 +2,26 @@
 
 source "https://rubygems.org"
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.23-stable" }
-
 ruby RUBY_VERSION
 
-gem "decidim", DECIDIM_VERSION
-gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-consultations", DECIDIM_VERSION
-gem "decidim-elections", DECIDIM_VERSION
-gem "decidim-initiatives", DECIDIM_VERSION
-#gem "decidim-templates", DECIDIM_VERSION
+gem "decidim", "0.23.1"
+# gem "decidim-consultations", "0.23.1"
+# gem "decidim-initiatives", "0.23.1"
+# gem "decidim-templates", "0.23.1"
 
-gem "bootsnap", "~> 1.4"
+gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 4.3.5"
 gem "uglifier", "~> 4.1"
 
-gem "faker", "~> 2.14"
-gem "sidekiq"
+gem "faker", "~> 1.9"
+
+gem "wicked_pdf", "~> 1.4"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  # Use latest simplecov from master until next version of simplecov is
-  # released (greather than 0.18.5)
-  # See https://github.com/decidim/decidim/issues/6230
-  gem "simplecov", "~> 0.19.0"
-
-  gem "decidim-dev", DECIDIM_VERSION
+  gem "decidim-dev", "0.23.1"
 end
 
 group :development do

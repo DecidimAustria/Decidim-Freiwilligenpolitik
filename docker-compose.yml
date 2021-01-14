@@ -1,10 +1,7 @@
 version: '3'
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    #image: decidim/decidim:0.24.0.dev
+    image: decidim/decidim:0.23.1
     volumes:
       - .:/app
       - bundle:/usr/local/bundle
@@ -14,41 +11,16 @@ services:
       - DATABASE_HOST=pg
       - DATABASE_USERNAME=postgres
       - RAILS_ENV=development
-      - REDIS_URL=redis://redis:6379
     ports:
       - 3000:3000
     links:
       - pg
-      - redis
     command: bundle exec puma
-  worker:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - .:/app
-      - bundle:/usr/local/bundle
-    environment:
-      - DATABASE_HOST=pg
-      - DATABASE_USERNAME=postgres
-      - RAILS_ENV=development
-      - REDIS_URL=redis://redis:6379
-    links:
-      - pg
-      - redis
-    command: bundle exec sidekiq
   pg:
     image: postgres
     volumes:
       - pg-data:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_HOST_AUTH_METHOD=trust
-  redis:
-    image: redis
-    volumes:
-      - redis-data:/data
 volumes:
   node_modules: {}
   bundle: {}
   pg-data: {}
-  redis-data: {}
