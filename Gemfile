@@ -5,9 +5,11 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 gem "decidim", "0.23.1"
-# gem "decidim-consultations", "0.23.1"
-# gem "decidim-initiatives", "0.23.1"
-# gem "decidim-templates", "0.23.1"
+gem "decidim-consultations", "0.23.1"
+gem "decidim-initiatives", "0.23.1"
+gem "decidim-templates", "0.23.1"
+gem "decidim-calendar"
+gem "decidim-conferences"
 
 gem "bootsnap", "~> 1.3"
 
