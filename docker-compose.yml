@@ -81,7 +81,7 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=devproxynet"
       - "traefik.http.services.decidim-web-service.loadbalancer.server.port=3000"
-      - "traefik.http.routers.decidimweb.rule=Host(`decidim.localtest.me`)"
+      - "traefik.http.routers.decidimweb.rule=Host(`decidim.localtest.me`,`decidim-org.localtest.me`)"
       - "traefik.http.routers.decidimweb.entrypoints=http"
       - "traefik.http.routers.decidimweb.service=decidim-web-service"
 
