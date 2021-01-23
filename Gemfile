@@ -6,6 +6,7 @@ ruby RUBY_VERSION
 
 gem "decidim", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
 gem "decidim-templates", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
+gem "decidim-initiatives", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
 gem "decidim-calendar"
 
 gem "bootsnap", "~> 1.3"
@@ -18,6 +19,8 @@ gem "faker", "~> 1.9"
 gem "wicked_pdf", "~> 1.4"
 
 gem "sidekiq"
+
+gem "sentry-raven"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
