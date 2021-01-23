@@ -7,7 +7,10 @@ ruby RUBY_VERSION
 gem "decidim", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
 gem "decidim-templates", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
 gem "decidim-initiatives", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
-gem "decidim-calendar"
+gem "decidim-consultations", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
+gem "decidim-conferences", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
+
+gem "decidim-calendar", git: "https://github.com/alabs/decidim-module-calendar.git", branch: "master"
 
 gem "bootsnap", "~> 1.3"
 
