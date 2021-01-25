@@ -48,7 +48,7 @@ deploy:
     name: production
     url: https://live.decidim-austria.org/
   only:
-    - production
+    - live
   script:
     - git-push ssh://dokku@dokku1.decidim-austria.org:22/$APP_NAME
 
@@ -59,6 +59,6 @@ deploy_staging:
     name: staging
     url: http://staging.decidim-austria.org/
   only:
-    - master
+    - staging
   script:
     - git-push ssh://dokku@dokku1.decidim-austria.org:22/$STAGE_APP_NAME
