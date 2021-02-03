@@ -143,14 +143,14 @@ de:
         publish: Veröffentlichen
         title: Änderungsvorschlag veröffentlichen
       promoted:
-        error: Es gab Fehler bei der Förderung der Emendation
-        success: Die Emendation wurde erfolgreich gefördert
+        error: Es gab Fehler bei der Förderung des Änderungsvorschlags
+        success: Der Änderungsvorschlag wurde erfolgreich unterstützt
       publish_draft:
         error: Es gab ein Problem bei der Veröffentlichung des Änderungsvorschlags.
         success: Änderungsvorschlag erfolgreich veröffentlicht.
       rejected:
         error: Beim Ablehnen dieser Änderung ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut
-        success: Die Emendation wurde erfolgreich abgelehnt
+        success: Der Änderungsvorschlag wurde erfolgreich abgelehnt
       review:
         back: Zurück
         heading: Überprüfen Sie die Änderung
@@ -354,7 +354,7 @@ de:
           newsletter: Erhalten Sie einen gelegentlichen Newsletter mit relevanten Informationen
           newsletter_title: Kontakt Erlaubnis
           nickname_help: Ihr Pseudonym in %{organization}
-          password_help: "Mindestens %{minimun_characters} Zeichen, nicht zu häufig (z. B. 123456) und darf nicht Ihr Benutzername oder Ihre E-Mail-Adresse sein."
+          password_help: "Mindestens %{minimun_characters} Zeichen, nicht zu häufig (z. B. 123456) und es darf nicht Ihr Benutzername oder Ihre E-Mail-Adresse sein."
           sign_in: Anmelden
           sign_up: Registrieren
           sign_up_as:
@@ -376,7 +376,7 @@ de:
             check: Überprüfen und fortfahren
             close_modal: Modal schließen
           notice: |-
-            <p>Hey, sind Sie sicher, dass Sie keinen Newsletter erhalten möchten?<br>
+            <p>Sind Sie sicher, dass Sie keinen Newsletter erhalten möchten?<br>
             Bitte überlegen Sie sich noch einmal das Kontrollkästchen für den Newsletter doch anzukreuzen.<br>
             Für uns ist es sehr wichtig, die Möglichkeit zu haben Ihnen gelegentlich E-Mails mit wichtigen Ankündigungen schicken zu können. Sie können dies jederzeit in den Benachrichtigungseinstellungen ändern.</p>
             <p>Wenn Sie das Kontrollkästchen nicht ankreuzen, verpassen Sie möglicherweise relevante Informationen zu neuen Beteiligungsmöglichkeiten auf der Plattform.<br>
@@ -422,48 +422,48 @@ de:
       amendments:
         amendment_accepted:
           affected_user:
-            email_intro: 'Eine Emendation wurde für %{amendable_title}akzeptiert. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von %{amendable_title}.
+            email_intro: 'Ein Änderungsvorschlag wurde für %{amendable_title} akzeptiert. Sie können ihn auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie Autor von %{amendable_title} sind.
             email_subject: Eine für %{amendable_title} angenommene Änderung von %{emendation_author_nickname}
             notification_title: Die <a href="%{emendation_path}">Abänderung</a> die durch <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> wurde, wurde für <a href="%{amendable_path}">%{amendable_title}</a>.
           follower:
-            email_intro: 'Eine Emendation wurde für %{amendable_title}akzeptiert. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{amendable_title}. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
+            email_intro: 'Eine Änderung wurde für %{amendable_title} akzeptiert. Sie können es auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie Autor von %{amendable_title} sind. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
             email_subject: Eine für %{amendable_title} angenommene Änderung von %{emendation_author_nickname}
-            notification_title: Die <a href="%{emendation_path}">Abänderung</a> die durch <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> wurde, wurde für <a href="%{amendable_path}">%{amendable_title}</a>.
+            notification_title: Die <a href="%{emendation_path}">Abänderung</a> durch <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> für <a href="%{amendable_path}">%{amendable_title}</a>.
         amendment_created:
           affected_user:
-            email_intro: 'Eine neue Ausgabe wurde für %{amendable_title}. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von %{amendable_title}.
+            email_intro: 'Ein neuer Änderungsantrag wurde für %{amendable_title} erstellt. Sie können ihn auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von %{amendable_title} sind.
             email_subject: Neuer Änderungsantrag für %{amendable_title}
-            notification_title: Eine neue Änderung wurde für <a href="%{amendable_path}">%{amendable_title}</a>.
+            notification_title: Eine neue Änderung für <a href="%{amendable_path}">%{amendable_title}</a>.
           follower:
-            email_intro: 'Eine neue Ausgabe wurde für %{amendable_title}. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{amendable_title}. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
+            email_intro: 'Ein neuer Änderungsantrag wurde für %{amendable_title} erstellt. Sie können es auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{amendable_title} folgen. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
             email_subject: Neuer Änderungsantrag für %{amendable_title}
-            notification_title: Eine neue Änderung wurde für <a href="%{amendable_path}">%{amendable_title}</a>.
+            notification_title: Eine neue Änderung für <a href="%{amendable_path}">%{amendable_title}</a>.
         amendment_promoted:
           affected_user:
-            email_intro: 'Eine für %{amendable_title} abgelehnte Ausgabe wurde zu einer unabhängigen %{amendable_type}. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von %{amendable_title}.
-            email_subject: Eine Änderung von %{emendation_author_nickname} wurde als neue %{amendable_type}
-            notification_title: A <a href="%{emendation_path}">abgelehnte Änderung</a> für <a href="%{amendable_path}">%{amendable_title}</a> hat als neue veröffentlicht %{amendable_type} von <a href="%{emendation_author_path}">%{emendation_author_nickname}</a>.
+            email_intro: 'Ein für %{amendable_title} abgelehnter Änderungsvorschlag wurde zu einer unabhängigen %{amendable_type}. Sie können es auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von %{amendable_title} sind.
+            email_subject: Eine Änderung von %{emendation_author_nickname} als neue %{amendable_type}
+            notification_title: Eine <a href="%{emendation_path}">abgelehnte Änderung</a> für <a href="%{amendable_path}">%{amendable_title}</a> hat neu veröffentlicht %{amendable_type} von <a href="%{emendation_author_path}">%{emendation_author_nickname}</a>.
           follower:
-            email_intro: 'Eine für %{amendable_title} abgelehnte Ausgabe wurde zu einer unabhängigen %{amendable_type}. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{amendable_title}. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
-            email_subject: Eine Änderung von %{emendation_author_nickname} wurde als neue %{amendable_type}
-            notification_title: A <a href="%{emendation_path}">abgelehnte Änderung</a> für <a href="%{amendable_path}">%{amendable_title}</a> hat als neue veröffentlicht %{amendable_type} von <a href="%{emendation_author_path}">%{emendation_author_nickname}</a>.
+            email_intro: 'Ein für %{amendable_title} abgelehnter Änderungsantrag wurde zu einer unabhängigen %{amendable_type}. Sie können ihn auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{amendable_title} folgen. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
+            email_subject: Eine Änderung von %{emendation_author_nickname} als neue %{amendable_type}
+            notification_title: Eine <a href="%{emendation_path}">abgelehnte Änderung</a> für <a href="%{amendable_path}">%{amendable_title}</a>. Neu veröffentlicht %{amendable_type} von <a href="%{emendation_author_path}">%{emendation_author_nickname}</a>.
         amendment_rejected:
           affected_user:
-            email_intro: 'Eine Ausgabe wurde für %{amendable_title}abgelehnt. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von %{amendable_title}.
+            email_intro: 'Ein Änderungsantrag wurde für %{amendable_title}abgelehnt. Sie können ihn auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Autor von %{amendable_title} sind.
             email_subject: Ein Änderungsantrag wurde für %{amendable_title} von %{emendation_author_nickname}abgelehnt
             notification_title: Die <a href="%{emendation_path}">Änderung</a> die von <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> wurde, wurde für <a href="%{amendable_path}">%{amendable_title}</a>abgelehnt.
           follower:
-            email_intro: 'Eine Ausgabe wurde für %{amendable_title}abgelehnt. Sie können es auf dieser Seite sehen:'
-            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{amendable_title}. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
+            email_intro: 'Ein Änderungsantrag wurde für %{amendable_title}abgelehnt. Sie können ihn auf dieser Seite sehen:'
+            email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{amendable_title} folgen. Sie können den Erhalt von Benachrichtigungen über den vorherigen Link beenden.
             email_subject: Ein Änderungsantrag wurde für %{amendable_title} von %{emendation_author_nickname}abgelehnt
-            notification_title: Die <a href="%{emendation_path}">Änderung</a> die von <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> wurde, wurde für <a href="%{amendable_path}">%{amendable_title}</a>abgelehnt.
+            notification_title: Die <a href="%{emendation_path}">Änderung</a> die von <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> verfasst wurde, wurde für <a href="%{amendable_path}">%{amendable_title}</a>abgelehnt.
       attachments:
         attachment_created:
           email_intro: 'Ein neues Dokument wurde zu %{resource_title} hinzugefügt. Sie können es auf dieser Seite sehen:'
@@ -478,7 +478,7 @@ de:
           notification_title: Die Komponente %{resource_title} ist jetzt für <a href="%{resource_path}">%{participatory_space_title}</a> aktiv
       email_event:
         email_greeting: Hallo %{user_name},
-        email_intro: 'Es wurde ein Update auf "%{resource_title}" vorgenommen. Sie können es von dieser Seite sehen:'
+        email_intro: 'Es wurde ein Update auf "%{resource_title}" vorgenommen. Sie können es auf dieser Seite sehen:'
         email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie "%{resource_title}" folgen. Sie können sich durch den vorherigen Link davon abmelden.
         email_subject: Eine Aktualisierung auf %{resource_title}
       gamification:
@@ -488,10 +488,10 @@ de:
           email_subject: 'Du hast ein neues Abzeichen erhalten: %{badge_name}!'
           notification_title: Gut gemacht! Du hast das <a href="%{resource_path}">%{badge_name} Abzeichen</a> (Level %{current_level}) verdient.
         level_up:
-          email_intro: Gut gemacht! Du hast Stufe %{current_level} auf dem <a href="%{resource_url}">%{badge_name} Abzeichen</a>!
+          email_intro: Gut gemacht! Du hast Stufe %{current_level} und damit das <a href="%{resource_url}">%{badge_name} Abzeichen</a> erreicht!
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie auf unserer Website aktiv waren.
-          email_subject: Du hast Level %{current_level} auf dem %{badge_name} Abzeichen erreicht!
-          notification_title: Gut gemacht! Du hast Stufe %{current_level} auf dem <a href="%{resource_path}">%{badge_name} Abzeichen</a>!
+          email_subject: Du hast Level %{current_level} und das %{badge_name} Abzeichen erreicht!
+          notification_title: Gut gemacht! Du hast Stufe %{current_level} und das <a href="%{resource_path}">%{badge_name} Abzeichen</a> erreicht!
       groups:
         demoted_membership:
           email_intro: Ein Administrator der Gruppe <a href="%{resource_url}">%{user_group_name}</a> hat Ihre Administratorrechte für diese Gruppe entfernt.
@@ -526,8 +526,8 @@ de:
         removed_from_group:
           email_intro: Ein Admin der <a href="%{resource_url}">%{user_group_name}</a> -Gruppe hat dich davon entfernt.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie Mitglied dieser Gruppe waren.
-          email_subject: Du wurdest aus der Gruppe %{user_group_name}!
-          notification_title: Sie wurden aus der Gruppe <a href="%{resource_path}">%{user_group_name}</a>.
+          email_subject: Du wurdest aus der Gruppe %{user_group_name} entfernt!
+          notification_title: Sie wurden aus der Gruppe <a href="%{resource_path}">%{user_group_name}</a> entfernt.
         user_group_created:
           email_intro: Eine neue Benutzergruppe wurde erstellt mit dem Namen %{user_group_name}. Sie können sie über den <a href="%{groups_admin_url}">Admin-Panel</a> verifizieren.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator der Plattform sind.
@@ -548,7 +548,7 @@ de:
       users:
         profile_updated:
           email_intro: Die <a href="%{resource_url}">Profilseite</a> von %{name} (%{nickname}), der Sie folgen, wurde aktualisiert.
-          email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{nickname}. Sie können nach dem vorherigen Link keine Benachrichtigungen mehr erhalten.
+          email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{nickname} folgen. Sie können sich unter dem vorherigen Link von den Benachrichtigungen abmelden.
           email_subject: "%{nickname} hat ihr Profil aktualisiert"
           notification_title: Die <a href="%{resource_path}">Profilseite</a> von %{name} (%{nickname}), der Sie folgen, wurde aktualisiert.
     export_mailer:
@@ -603,7 +603,7 @@ de:
         file:
           explanation: 'Anleitung für Datei:'
           message_1: Muss ein Bild oder ein Dokument sein.
-          message_2: Für Bilder verwenden Sie vorzugsweise Landschaftsbilder, der Dienst bewirtschaftet das Bild.
+          message_2: Für Bilder verwenden Sie vorzugsweise Landschaftsbilder, der Dienst bearbeitet das Bild.
         image:
           explanation: 'Anleitung für Bild:'
           message_1: Vorzugsweise ein Querformat ohne Text.
@@ -618,7 +618,7 @@ de:
         followers:
           conditions:
             - Aktiv zu sein und anderen Menschen zu folgen, wird sicherlich andere Menschen dazu bringen, dir zu folgen.
-          description: Dieses Abzeichen wird gewährt, wenn Sie eine bestimmte Anzahl von Followern erreichen. %{organization_name} ist ein soziales und politisches Netzwerk, weben Sie Ihr Web, um mit anderen Menschen auf der Plattform zu kommunizieren.
+          description: Dieses Abzeichen wird gewährt, wenn Sie eine bestimmte Anzahl von Followern erreichen. %{organization_name} ist ein soziales und demokratisches Netzwerk.
           description_another: Diese*r Benutzer*in hat %{score} Follower.
           description_own: "%{score} Benutzer*innen folgen dir."
           name: Follower
@@ -628,21 +628,21 @@ de:
         index:
           badge_title: "%{name} Abzeichen"
           how: Wie kannst du es verdienen?
-          page_description: Badges sind Anerkennungen für Aktionen der Teilnehmer und Fortschritt in der Plattform. Wenn Sie auf der Plattform entdecken, teilnehmen und interagieren, verdienen Sie verschiedene Abzeichen. Hier ist die Liste der Abzeichen und einige Möglichkeiten, wie Sie sie verdienen können.
+          page_description: Abzeichen sind Anerkennungen für Aktivitäten der Teilnehmer und ihren Fortschritt auf der Plattform. Wenn Sie die Plattform entdecken, daran teilnehmen und interagieren, verdienen Sie verschiedene Abzeichen. Hier ist die Liste der Abzeichen und einige Möglichkeiten, wie Sie sie verdienen können.
           title: Abzeichen
         invitations:
           conditions:
             - Verwenden Sie den Link "Freunde einladen" auf Ihrer Nutzerseite, um Ihre Freunde einzuladen
             - Passen Sie, wenn Sie möchten, die gesendete Nachricht an
-            - Sie werden auf den neuesten Stand gebracht, indem Sie Einladungen senden und sie registrieren lassen.
-          description: Dieses Abzeichen wird gewährt, wenn Sie einige Personen eingeladen haben und sie sich ein wenig Zeit genommen haben, um sich in %{organization_name} zu registrieren und Teilnehmer zu werden. Vielen Dank für die Herstellung von %{organization_name} anderen bekannt und helfen , die Gemeinschaft zu erweitern!
+            - Sie werden auf den neuesten Stand gebracht, wenn Sie Einladungen senden und Ihre Freunde sich registrieren lassen.
+          description: Dieses Abzeichen wird gewährt, wenn Sie einige Personen eingeladen haben und diese sich bei %{organization_name} registrieren. Vielen Dank, dass Sie %{organization_name} bekannter machen und helfen, die Gemeinschaft zu erweitern!
           description_another: Diese*r Benutzer*in hat %{score} Benutzer*innen eingeladen.
           description_own: Sie haben %{score} Benutzer*innen eingeladen.
           name: Einladungen
           next_level_in: Laden Sie %{score} weitere Benutzer*innen ein, um das nächste Level zu erreichen!
           unearned_another: Diese*r Benutzer*in hat noch niemanden eingeladen.
           unearned_own: Sie haben noch keine Benutzer*innen eingeladen.
-      description: Badges sind Anerkennungen für Aktionen der Teilnehmer und Fortschritt in der Plattform. Wenn Sie auf der Plattform entdecken, teilnehmen und interagieren, verdienen Sie verschiedene Abzeichen.
+      description: Abzeichen sind Anerkennungen für Aktivitäten der Teilnehmer und ihren Fortschritt auf der Plattform. Wenn Sie die Plattform entdecken, daran teilnehmen und interagieren, verdienen Sie verschiedene Abzeichen.
       level: Level %{level}
       reached_top: Du hast die höchste Stufe für dieses Abzeichen erreicht.
     group_admins:
@@ -677,14 +677,14 @@ de:
         success: Beitrittsanfrage wurde erfolgreich angenommen
       actions:
         are_you_sure: Bist du sicher?
-        promote_to_admin: Machen Admin
+        promote_to_admin: Zu Admin machen
         remove_from_group: Benutzer entfernen
       index:
         current_members_without_admins: 'Aktuelle Mitglieder (ohne Admins):'
         manage_members: Mitglieder verwalten
       promote:
-        error: Bei der Förderung dieses Benutzers ist ein Fehler aufgetreten
-        success: Benutzer wurde erfolgreich befördert
+        error: Bei der Unterstützung dieses Benutzers ist ein Fehler aufgetreten
+        success: Benutzer wurde erfolgreich unterstützt
       reject:
         error: Beim Ablehnen dieser Beitrittsanfrage ist ein Fehler aufgetreten
         success: Beitrittsanfrage wurde erfolgreich abgelehnt
@@ -724,7 +724,7 @@ de:
       no_user_groups: Gehört noch keiner Gruppe an.
       roles:
         admin: Administrator
-        creator: Schöpfer
+        creator: Ersteller
         member: Mitglied
       update:
         error: Beim Aktualisieren der Gruppe ist ein Problem aufgetreten
@@ -732,7 +732,7 @@ de:
     help:
       main_topic:
         default_page:
-          content: "<p>In %{organization} Sie durch die Leerzeichen, die Sie im oberen Menü sehen, an verschiedenen Themen teilnehmen: Prozesse, Baugruppen, Initiativen, Konsultationen.</p> <p>In jedem Bereich finden Sie verschiedene Optionen für die Teilnahme: Vorschläge machen - einzeln oder mit anderen -, an Debatten teilnehmen, Prioritäten für umzusetzende Projekte setzen, persönliche Treffen und andere Aktionen besuchen.</p>\n"
+          content: "<p>In %{organization} können Sie, wie Sie im oberen Menü sehen, an verschiedenen Themen teilnehmen: Prozesse, Initiativen, Konsultationen.</p> <p>In jedem Bereich finden Sie verschiedene Optionen für die Teilnahme: Vorschläge machen - einzeln oder mit anderen -, an Debatten teilnehmen, Prioritäten für umzusetzende Projekte setzen, persönliche Treffen und andere Aktionen besuchen.</p>\n"
           title: Was kann ich in %{organization}?
         description: Lesen Sie mehr über %{organization}
         title: Allgemeine Hilfe
@@ -782,35 +782,35 @@ de:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
           intro: "%{manager} hat eine Unterhaltung im Namen von %{group} begonnen. Klicken Sie hier, um diese anzuzeigen:"
-          outro: Viel Spaß mit Decidim!
+          outro: Viel Spaß!
           subject: "%{manager} hat eine Unterhaltung als %{group} begonnen"
         comanagers_new_message:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
           intro: "%{manager} hat Nachrichten in einer Unterhaltung im Namen von %{group} gesendet. Klicken Sie hier, um diese anzuzeigen:"
-          outro: Viel Spaß mit Decidim!
+          outro: Viel Spaß!
           subject: "%{manager} hat neue Nachrichten als %{group} gesendet"
         new_conversation:
           greeting: Hallo, %{recipient}!
           intro: "%{sender} hat eine neue Unterhaltung mit Ihnen begonnen. Klicken Sie hier, um es zu sehen:"
-          outro: Viel Spaß mit Decidim!
+          outro: Viel Spaß!
           subject: "%{sender} hat ein Gespräch mit Ihnen begonnen"
         new_group_conversation:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
           intro: "%{sender} hat eine neue Unterhaltung mit der Gruppe %{group} begonnen. Klicken Sie hier, um diese anzuzeigen:"
-          outro: Viel Spaß mit Decidim!
+          outro: Viel Spaß!
           subject: "%{sender} hat eine Unterhaltung mit %{group} begonnen"
         new_group_message:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
           intro: "%{sender} hat neue Nachrichten in einer Unterhaltung mit der Gruppe %{group} gesendet. Klicken Sie hier, um diese anzuzeigen:"
-          outro: Viel Spaß mit Decidim!
+          outro: Viel Spaß!
           subject: "%{group} hat neue Nachrichten von %{sender}"
         new_message:
           greeting: Hallo, %{recipient}!
           intro: "%{sender} hat neue Nachrichten in Ihrer Konversation gepostet. Klicken Sie hier, um sie zu sehen:"
-          outro: Viel Spaß mit Decidim!
+          outro: Viel Spaß!
           subject: Sie haben neue Nachrichten von %{sender}
       conversations:
         add_conversation_users:
@@ -862,7 +862,7 @@ de:
         title: Benutzer
     newsletter_mailer:
       newsletter:
-        note: Sie haben diese E-Mail erhalten, weil Sie Newsletter auf %{organization_name}abonniert haben. Sie können Ihre Einstellungen auf Ihrer ändern <a href="%{link}">Benachrichtigungen Seite</a>.
+        note: Sie haben diese E-Mail erhalten, weil Sie Newsletter auf %{organization_name}abonniert haben. Sie können Ihre Einstellungen ändern <a href="%{link}">Benachrichtigungen Seite</a>.
         see_on_website: Kann diese E-Mail nicht korrekt angezeigt werden? Klicken Sie bitte hier <a href="%{link}" target="_blank">website</a>.
         unsubscribe: Um den Empfang dieser Art von E-Mail zu deaktivieren, <a href="%{link}" target="_blank" class="unsubscribe">Abbestellen</a>.
     newsletter_templates:
@@ -902,7 +902,7 @@ de:
         body_2: 'Wie können Sie uns Ihre Zustimmung geben? Klicken Sie einfach auf den folgenden Knopf:'
         body_3: Mit dieser Zustimmung können Sie weiterhin Informationen über die Dienste der Plattform erhalten. Wenn wir im Gegenteil keine positive Bestätigung von Ihnen erhalten, werden wir Ihnen keine Nachrichten mehr senden. Wenn Sie bestätigen, dass Sie weiterhin informiert werden möchten, haben Sie jederzeit die Möglichkeit, den Vorgang abzubrechen.
         button: Ja, ich möchte weiterhin relevante Informationen erhalten
-        greetings: Grüße,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        greetings: Beste Grüße,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
         hello: Hallo,
         subject: Möchten Sie weiterhin relevante Informationen über %{organization_name} erhalten?
     notifications:
@@ -982,19 +982,19 @@ de:
         topics: Themen
       participatory_space:
         metrics:
-          headline: Teilnahme an Zahlen
+          headline: Teilnahme in Zahlen
           link: Alle Statistiken anzeigen
       terms_and_conditions:
         accept:
           error: Beim Akzeptieren der Nutzungsbedingungen ist ein Fehler aufgetreten.
-          success: Groß! Sie haben die Allgemeinen Geschäftsbedingungen akzeptiert.
+          success: Super, Sie haben die Allgemeinen Geschäftsbedingungen akzeptiert.
         form:
           legend: Stimme den Nutzungsbedingungen zu
         refuse:
-          modal_body: Wenn Sie sich weigern, werden Sie nicht in der Lage sein , die Plattform zu nutzen, können Sie <a href="%{data_portability_path}">laden Sie Ihre Daten</a> und / oder <a href="%{delete_path}">Ihr Konto löschen</a>.
+          modal_body: Wenn Sie sich weigern, werden Sie nicht in der Lage sein die Plattform zu nutzen. Sie können <a href="%{data_portability_path}"> Ihre Daten herunterladen</a> und / oder <a href="%{delete_path}">Ihr Konto löschen</a>.
           modal_btn_continue: Bedingungen akzeptieren und fortfahren
           modal_btn_exit: Ich werde es später überprüfen
-          modal_button: Verweiße die Bedingungen
+          modal_button: Bedingungen ablehnen
           modal_close: Modal schließen
           modal_title: Lehnen Sie die aktualisierten Geschäftsbedingungen wirklich ab?
         required_review:
@@ -1022,7 +1022,7 @@ de:
         view_full_profile: Sehen Sie sich Vollständiges Profil anzeigen
       sidebar:
         badges:
-          info: Abzeichen werden verdient, indem bestimmte Aktivitäten in der Plattform ausgeführt werden.
+          info: Abzeichen werden verdient, indem bestimmte Aktivitäten auf der Plattform ausgeführt werden.
           title: Abzeichen
       user:
         confirmation_instructions_sent: E-Mail-Bestätigungsanweisungen gesendet
@@ -1089,7 +1089,7 @@ de:
         close_modal: Modal schließen
         filter: Filter
         filter_by: Filtern nach
-        unfold: Entfalten
+        unfold: Ausklappen
       results:
         results:
           one: "%{count} Ergebnis"
@@ -1111,7 +1111,7 @@ de:
         embed_link: Einbetten
       extended_navigation_bar:
         more: Mehr
-        unfold: Entfalten
+        unfold: Ausklappen
       filter_form_help:
         help: Das untenstehende Formular filtert die Suchergebnisse dynamisch, wenn die Suchbedingungen geändert werden.
         skip: Zu Ergebnissen springen
@@ -1119,7 +1119,7 @@ de:
         already_reported: Dieser Inhalt wurde bereits gemeldet und wird von einem Administrator überprüft.
         close: Schließen
         description: Ist dieser Inhalt unangemessen?
-        does_not_belong: Enthält illegale Aktivitäten, Selbstmorddrohungen, persönliche Informationen oder etwas anderes, von dem Sie denken, dass es nicht auf %{organization_name}.
+        does_not_belong: Enthält illegale Aktivitäten, Selbstmorddrohungen, persönliche Informationen oder etwas anderes, von dem Sie denken, dass es nicht auf %{organization_name} sein sollte.
         offensive: Enthält Rassismus, Sexismus, Verunglimpfungen, persönliche Angriffe, Morddrohungen, Selbstmordanträge oder jede Form von Hassreden.
         report: Bericht
         spam: Enthält Clickbait, Werbung, Scams oder Script Bots.
@@ -1193,7 +1193,7 @@ de:
     user_interests:
       show:
         my_interests: Meine Interessen
-        no_scopes: Diese Organisation hat noch keinen Spielraum!
+        no_scopes: Diese Organisation hat noch keine Bereiche!
         select_your_interests: Wählen Sie die Themen aus, an denen Sie interessiert sind, um Ereignisse, die sich auf sie beziehen, auf der Registerkarte "Zeitleiste" Ihres Profils zu erhalten.
         update_my_interests: Aktualisieren Sie meine Interessen
       update:
@@ -1227,8 +1227,8 @@ de:
       show:
         version_index: Version %{index}
     welcome_notification:
-      default_body: <p>Hallo {{name}}, Dank für die Verbindung {{organization}} und willkommen!</p><ul><li>Wenn Sie sich schnell ein Bild machen möchten, was Sie hier tun können, sehen Sie sich den Abschnitt <a href="{{help_url}}">Hilfe</a> .</li><li>Sobald Sie es gelesen haben, erhalten Sie Ihr erstes Abzeichen. Hier ist eine <a href="{{badges_url}}">Liste aller Abzeichen</a> Sie erhalten können, wenn Sie an {{organization}}</li><li>teilnehmen. Schließen Sie sich anderen Personen an, und teilen Sie mit ihnen die Erfahrung, an {{organization}}teilzunehmen. Machen Sie Vorschläge, kommentieren Sie, diskutieren Sie, wie Sie einen Beitrag zum Gemeinwohl leisten können, geben Sie Argumente an, die überzeugen, zuhören und lesen, um überzeugt zu sein, drücken Sie Ihre Ideen konkret und direkt aus, reagieren Sie mit Geduld und Entscheidung, verteidigen Sie Ihre Ideen und halten Sie sie Offenheit, um zusammenzuarbeiten und sich den Ideen anderer anzuschließen.</li></ul>
-      default_subject: Danke, dass du {{organization}}beigetreten {{organization}} !
+      default_body: <p> Hallo {{name}}, schön, dass Sie sich bei der {{organization}} registriert haben. Herzlich willkommen!</p><ul><li> Wenn Sie sich schnell ein Bild machen möchten, was Sie hier tun können, sehen Sie sich den Abschnitt <a href="{{help_url}}">Hilfe</a> an.</li><li> Sie können auf dieser Plattform Ihre Vorschläge, Erfahrungen und Ideen mit anderen Menschen auf {{organization}} teilen. Machen Sie Vorschläge, kommentieren Sie, diskutieren Sie! Schreiben Sie konkret und untermauern Sie Ihre Standpunkte mit Argumenten. Lesen Sie die Beiträge anderer aufmerksam und diskutieren Sie wertschätzend. Wir freuen uns auf Ihre Beiträge und bedanken uns für Ihr Mitwirken! </li></ul>
+      default_subject: Danke, dass du {{organization}}beigetreten {{organization}} bist!
     wizard_step_form:
       wizard_aside:
         back: Zurück
@@ -1414,7 +1414,7 @@ de:
   layouts:
     decidim:
       cookie_warning:
-        description_html: Diese Seite verwendet Cookies. Indem Sie die Seite weiter durchsuchen, stimmen Sie der Verwendung von Cookies zu. Erfahren Sie mehr darüber %{link}.
+        description_html: Diese Seite verwendet Cookies. Indem Sie auf dieser Seite bleiben, stimmen Sie der Verwendung von Cookies zu. Erfahren Sie mehr darüber %{link}.
         link_label: Hier
         ok: Ich stimme zu
       edit_link:
