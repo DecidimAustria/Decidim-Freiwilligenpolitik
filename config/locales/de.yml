@@ -373,7 +373,7 @@ de:
       shared:
         newsletter_modal:
           buttons:
-            check: Überprüfen und fortfahren
+            check: Newsletter doch abonnieren und fortfahren
             close_modal: Modal schließen
           notice: |-
             <p>Sind Sie sicher, dass Sie keinen Newsletter erhalten möchten?<br>
