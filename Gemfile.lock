@@ -368,6 +368,10 @@ GEM
     db-query-matchers (0.9.0)
       activesupport (>= 4.0, <= 6.0)
       rspec (~> 3.0)
+    decidim-decidim_awesome (0.6.3)
+      decidim-admin (>= 0.22.0, < 0.24)
+      decidim-core (>= 0.22.0, < 0.24)
+      redcarpet (~> 3.4)
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
@@ -835,6 +839,7 @@ DEPENDENCIES
   decidim-calendar!
   decidim-conferences!
   decidim-consultations!
+  decidim-decidim_awesome (~> 0.6.3)
   decidim-dev
   decidim-initiatives!
   decidim-templates!
