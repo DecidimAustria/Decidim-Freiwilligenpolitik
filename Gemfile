@@ -12,6 +12,8 @@ gem "decidim-conferences", git: "https://github.com/decidim/decidim.git", branch
 
 gem "decidim-calendar", git: "https://github.com/alabs/decidim-module-calendar.git", branch: "master"
 
+gem "decidim-decidim_awesome", "~> 0.6.3"
+
 gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 4.3.5"
@@ -41,7 +43,6 @@ group :development do
 end
 
 group :production do
-  gem "sentry-raven"
   gem "rails_12factor"
 end
 
