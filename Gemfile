@@ -28,7 +28,7 @@ gem "sentry-raven"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", "0.23.1"
+  gem "decidim-dev"
 end
 
 group :development do
