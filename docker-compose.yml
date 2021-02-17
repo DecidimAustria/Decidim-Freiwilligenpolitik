@@ -44,10 +44,8 @@ x-backend: &backend
     REDIS_URL: "redis://redis:6379/"
     #BUNDLE_PATH: /bundle/vendor
   depends_on:
-    postgres:
-      condition: service_healthy
-    redis:
-      condition: service_healthy
+    - postgres
+    - redis
 
 services:
   runner:
@@ -103,9 +101,9 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432
-    healthcheck:
-      test: pg_isready -U postgres -h 127.0.0.1
-      interval: 5s
+    #healthcheck:
+    #  test: pg_isready -U postgres -h 127.0.0.1
+    #  interval: 5s
 
   redis:
     image: redis:6-alpine
@@ -113,11 +111,11 @@ services:
       - redis:/data
     ports:
       - 6379
-    healthcheck:
-      test: redis-cli ping
-      interval: 1s
-      timeout: 3s
-      retries: 30
+    #healthcheck:
+    #  test: redis-cli ping
+    #  interval: 1s
+    #  timeout: 3s
+    #  retries: 30
 
 #  webpacker:
 #    <<: *app
