@@ -32,7 +32,7 @@ x-backend: &backend
     - .dockerdev/.bashrc:/root/.bashrc:ro
   environment:
     <<: *env
-    DATABASE_URL: postgres://postgres:postgres@postgres/devdblive
+    DATABASE_URL: postgres://postgres:postgres@postgres/devdb
     STRIPE_ENABLED: "true"
     EDITOR: vim
     WEBPACKER_DEV_SERVER_HOST: webpacker
@@ -96,7 +96,7 @@ services:
       - ./log:/root/log:cached
     environment:
       PSQL_HISTFILE: /root/log/.psql_history
-      POSTGRES_DB: devdblive
+      POSTGRES_DB: devdb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
