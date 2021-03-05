@@ -11,6 +11,7 @@ gem "decidim", git: "https://github.com/decidim/decidim.git", branch: "release/0
 # gem "decidim-conferences", git: "https://github.com/decidim/decidim.git", branch: "release/0.23-stable"
 #
 # gem "decidim-calendar", git: "https://github.com/alabs/decidim-module-calendar.git", branch: "master"
+gem "decidim-decidim_awesome", "~> 0.6.3"
 
 gem "bootsnap", "~> 1.3"
 
@@ -28,7 +29,7 @@ gem "sentry-raven"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "decidim-dev", "0.23.1"
+  gem "decidim-dev"
 end
 
 group :development do
@@ -41,7 +42,6 @@ group :development do
 end
 
 group :production do
-  gem "sentry-raven"
   gem "rails_12factor"
 end
 

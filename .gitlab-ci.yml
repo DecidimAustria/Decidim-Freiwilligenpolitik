@@ -26,7 +26,7 @@ test:
     - curl -sL https://deb.nodesource.com/setup_12.x  | bash -
     - apt-get update
     - apt-get install -y nodejs apt-utils libssl-dev cmake
-    - gem install bundler #-v 2.0.1
+    - gem install bundler -v 2.2.9
     #- bundle install --path .bundle
     - bundle install -j $(nproc) --path vendor
     #- bundle install -j $(nproc) --path vendor/ruby  # Install dependencies into vendor/ruby
