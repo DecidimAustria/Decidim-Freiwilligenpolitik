@@ -84,6 +84,11 @@ Decidim.configure do |config|
   #   static: { url: "https://staticmap.example.org/" },
   #   geocoding: { host: "nominatim.example.org", use_https: true }
   # }
+  config.maps = {
+    provider: :here,
+    api_key: Rails.application.secrets.maps[:api_key],
+    static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" }
+  }
 
   # Geocoder configurations if you want to customize the default geocoding
   # settings. The maps configuration will manage which geocoding service to use,
