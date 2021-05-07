@@ -3,8 +3,8 @@ stages:
   - deploy
 
 variables:
-  APP_NAME: live
-  STAGE_APP_NAME: staging
+  APP_NAME: freiwillig
+  STAGE_APP_NAME: freiwillig-staging
 
 test:
   stage: test
@@ -46,7 +46,7 @@ deploy:
   stage: deploy
   environment:
     name: production
-    url: https://live.decidim-austria.org/
+    url: https://freiwillig.decidim-austria.org/
   only:
     - live
   script:
@@ -57,7 +57,7 @@ deploy_staging:
   stage: deploy
   environment:
     name: staging
-    url: http://staging.decidim-austria.org/
+    url: http://freiwillig-staging.decidim-austria.org/
   only:
     - staging
   script:
