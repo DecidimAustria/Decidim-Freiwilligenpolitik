@@ -1,47 +1,8 @@
-# decidimaustria
+# freiwillig
 
 Free Open-Source participatory democracy, citizen participation and open government for cities and organizations
 
-This is the open-source repository for decidim austria, based on [Decidim](https://github.com/decidim/decidim).
-
-## Running dev environment using Vagrant
-
-**Prerequisites**
-
-Install Vagrant (https://www.vagrantup.com/downloads)
-
-**Run dev environment**
-
-**Docker**
-
-Attention:
-
-In v0.23.1 db:seed will fail because of a bug:
-  https://github.com/decidim/decidim/issues/7057
-
-```bash
-docker-compose build
-docker-compose run --rm app bundle exec rake db:create db:schema:load db:seed
-docker-compose up
-```
-
-**Vagrant**
-
-```bash
-vagrant up
-vagrant ssh
-cd /vagrant/decidimaustria/
-rails s -b 0.0.0.0
-```
-4. Open URL in Browser: http://localhost:4567
-
-## Deploying to dokku
-
-**E-Mail Settings**
-
-For E-Mails to work it seems we have to configure smtp settings in the environment and also in the admin interface for the organizations.
-
-dokku config:set staging SMTP_USERNAME=xxx SMTP_PASSWORD='XXXX' SMTP_ADDRESS=mail.xxx.xx SMTP_DOMAIN=xxx.xx
+This is the open-source repository for freiwillig, based on [Decidim](https://github.com/decidim/decidim).
 
 ## Setting up the application
 
@@ -59,13 +20,3 @@ user.save!
 6. Fill the rest of the form and submit it.
 
 You're good to go!
-
-## Updates
-
-To update decidim to the lastest version:
-
-```
-bundle update decidim
-bin/rails decidim:upgrade
-bin/rails db:migrate
-```

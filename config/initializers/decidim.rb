@@ -2,10 +2,10 @@
 
 Decidim.configure do |config|
   # The name of the application
-  config.application_name = "Decidim Austria"
+  config.application_name = "Beteiligungsprozess zum Freiwilligengesetz"
 
   # The email that will be used as sender in all emails from Decidim
-  config.mailer_sender = "staging@decidim-austria.at"
+  config.mailer_sender = "hello@mitgestalten.jetzt"
 
   # Sets the list of available locales for the whole application.
   #
@@ -287,3 +287,6 @@ end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
+
+# Inform Decidim about the assets folder
+Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
