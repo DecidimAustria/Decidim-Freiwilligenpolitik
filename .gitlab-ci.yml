@@ -8,7 +8,7 @@ variables:
 
 test:
   stage: test
-  image: ruby:2.6.6
+  image: ruby:2.7.5
   services:
     - postgres:11-alpine
   cache:
