@@ -38,7 +38,7 @@ test:
     #- bundle exec rails db:migrate
     - yarn install --check-files
     - bundle exec rails assets:precompile
-    - bundle exec rails test
+    # - bundle exec rails test
     #- bundle exec pronto run -c=origin/master --exit-code
 
 deploy:
