@@ -23,7 +23,7 @@ test:
     DATABASE_URL: postgres://postgres:testooSh0fie@postgres:5432/testdb
     RAILS_ENV: test
   before_script:
-    - curl -sL https://deb.nodesource.com/setup_12.x  | bash -
+    - curl -sL https://deb.nodesource.com/setup_16.x  | bash -
     - apt-get update
     - apt-get install -y nodejs apt-utils libssl-dev cmake
     - gem install bundler -v 2.2.9
