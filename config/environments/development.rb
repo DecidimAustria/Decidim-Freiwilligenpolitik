@@ -74,4 +74,6 @@ Rails.application.configure do
     host: "3000-#{ENV['GITPOD_WORKSPACE_ID']}.#{ENV['GITPOD_WORKSPACE_CLUSTER_HOST']}",
     port: 80
   }
+
+  config.action_controller.forgery_protection_origin_check = false
 end
