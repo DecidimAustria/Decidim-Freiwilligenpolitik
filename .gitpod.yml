@@ -6,7 +6,9 @@ image:
   file: .gitpod.dockerfile
 
 tasks:
-  - init: npm install && bin/setup
+  - name: server
+    before: rvm use "ruby-2.7.5"
+    init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
     command: bin/rails server
 vscode:
   extensions:
