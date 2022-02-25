@@ -2,10 +2,20 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 
+image:
+  file: .gitpod.dockerfile
+
 tasks:
-  - init: npm install && bin/setup
+  - name: server
+    before: rvm --default use "ruby-2.7.5"
+    init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
     command: bin/rails server
+  - name: webpacker
+    before: rvm --default use "ruby-2.7.5"
+    command: bin/webpack-dev-server
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
-
+    - eamodio.gitlens
+    - akamud.vscode-theme-onedark
+    - rebornix.ruby
