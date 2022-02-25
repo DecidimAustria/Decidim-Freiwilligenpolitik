@@ -6,3 +6,7 @@
   - newsletters_opt_in
   - events
   - metrics
+  - exports
+  - translations
+  - active_storage_purge
+  - active_storage_analysis
