@@ -10,6 +10,7 @@ link hover: #b3161e
 
 $fontcolor: #222;
 $linkhovercolor: #b3161e;
+$linkhoverwhite: #fff;
 $fontface: "Open Sans", Arial, Helvetica, sans-serif;
 
 body{
@@ -21,16 +22,18 @@ body{
     line-height: 1.7;
     color: $fontcolor;
   }
-  a, .card__link{color: $fontcolor;text-decoration:underline !important;}
+  a, .card__link{color: $fontcolor;}
+  a{text-decoration:underline !important;}
+  .button, .card__link, .card__link:hover{text-decoration:none !important;}
   a:hover{color: $linkhovercolor !important; text-decoration:none !important;}
+  .button:hover{color:$linkhoverwhite !important;}
   strong {font-weight: bolder;}
   /* 
   header styling 
   */
   .header{background:rgba(0, 0, 0, 1);}
   body.homepage .header{background:rgba(0, 0, 0, 0.5);position:absolute;left:0;top:0;right:0;width:auto;z-index:1000;}
-  .title-bar, 
-  .navbar{background:none;}
+  .title-bar, .navbar{background:none;}
   .right_block{margin-left:auto;}
   nav.main-nav li, 
   .main-nav__link a, 
@@ -38,16 +41,14 @@ body{
   .main-nav__link--active a, 
   .main-nav__link--active a:hover,
   .topbar__user__login a,
-  .topbar__user__login a:hover{font-weight: 700;text-decoration:none !important;color:#fff !important;border:none;box-shadow:none;background:none;}
+  .topbar__user__login a:hover{font-weight: 700;text-decoration:none !important;color:$linkhoverwhite !important;border:none;box-shadow:none;background:none;}
   .topbar__admin__link{display:inline-block;vertical-align: middle;margin-left:5px;}
-  
   .author-data .author__name {color: $fontcolor !important;}
   @media screen and (max-width: 39.99875em){
     .title-bar {
         border-top: 0em;
     }
   }
-  
   body.homepage .flash{margin-top:81px;}
   /*
   HERO
