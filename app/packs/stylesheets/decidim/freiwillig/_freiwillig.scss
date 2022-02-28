@@ -1,0 +1,98 @@
+/* 
+Created: 23.2.2022
+Modified: 27.2.2022
+Author: Piero Chiussi
+
+colors
+text: #222222
+link hover: #b3161e
+*/
+
+$fontcolor: #222;
+$linkhovercolor: #b3161e;
+$fontface: "Open Sans", Arial, Helvetica, sans-serif;
+
+body{
+    font-family: $fontface;
+    font-weight: 300;
+    letter-spacing: 0px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $fontcolor;
+  }
+  a, .card__link{color: $fontcolor;text-decoration:underline !important;}
+  a:hover{color: $linkhovercolor !important; text-decoration:none !important;}
+  strong {font-weight: bolder;}
+  /* 
+  header styling 
+  */
+  .header{background:rgba(0, 0, 0, 1);}
+  body.homepage .header{background:rgba(0, 0, 0, 0.5);position:absolute;left:0;top:0;right:0;width:auto;z-index:1000;}
+  .title-bar, 
+  .navbar{background:none;}
+  .right_block{margin-left:auto;}
+  nav.main-nav li, 
+  .main-nav__link a, 
+  .main-nav__link a:hover, 
+  .main-nav__link--active a, 
+  .main-nav__link--active a:hover,
+  .topbar__user__login a,
+  .topbar__user__login a:hover{font-weight: 700;text-decoration:none !important;color:#fff !important;border:none;box-shadow:none;background:none;}
+  .topbar__admin__link{display:inline-block;vertical-align: middle;margin-left:5px;}
+  
+  .author-data .author__name {color: $fontcolor !important;}
+  @media screen and (max-width: 39.99875em){
+    .title-bar {
+        border-top: 0em;
+    }
+  }
+  
+  body.homepage .flash{margin-top:81px;}
+  /*
+  HERO
+  */
+  .text-highlight.heading1{font-size:60px;font-family: $fontface;font-weight: 700;line-height: 1.7;}
+  body.homepage .text-highlight.heading1{margin-top:81px;}
+  /*
+  footer
+  */
+  .main__footer__nav{font-size: 16px;}
+  .main-footer a, .mini-footer a {color: $fontcolor;}
+  /*
+  PROCESS PAGES
+  */
+  .card__status{
+     .icon{fill:$fontcolor;}
+     .card__button,.secondary{color:$fontcolor;}
+  } 
+  
+  div.main-footer {
+    background-color: #fff;
+  }
+  
+  div.topbar__search input {
+    background-color: #fafafa;
+    color: #3d393c;
+  }
+  
+  div.topbar__search ::placeholder {
+    color: #808080;
+  }
+  
+  div.topbar__user__login a,
+  div.topbar__dropmenu>ul>li>a {
+    color: #3d393c;
+  }
+  
+  div.topbar__dropmenu>ul>li>a::after {
+    color: #3d393c !important;
+  }
+  
+  div.topbar__search:not(:focus-within) button {
+    background-color: #ededed;
+  }
+  
+  div.topbar__search:not(:focus-within) button {
+    color: #3d393c;
+  }
