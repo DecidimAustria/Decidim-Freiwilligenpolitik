@@ -22,11 +22,18 @@ body{
     line-height: 1.7;
     color: $fontcolor;
   }
+  // Headings
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {font-family: $fontface;}
   a, .card__link{color: $fontcolor;}
   a{text-decoration:underline !important;}
-  .button, .card__link, .card__link:hover{text-decoration:none !important;}
   a:hover{color: $linkhovercolor !important; text-decoration:none !important;}
-  .button:hover{color:$linkhoverwhite !important;}
+  .button, .card__link, .card__link:hover, .card__title:hover{text-decoration:none !important;}
+  .button:hover,.process-header__hashtag a{color:$linkhoverwhite !important;}
   strong {font-weight: bolder;}
   /* 
   header styling 
@@ -43,12 +50,14 @@ body{
   .topbar__user__login a,
   .topbar__user__login a:hover{font-weight: 700;text-decoration:none !important;color:$linkhoverwhite !important;border:none;box-shadow:none;background:none;}
   .topbar__admin__link{display:inline-block;vertical-align: middle;margin-left:5px;}
-  .author-data .author__name {color: $fontcolor !important;}
+  .author-data .author__name{color: $fontcolor !important;}
   @media screen and (max-width: 39.99875em){
     .title-bar {
         border-top: 0em;
     }
   }
+  .card__title{font-weight: 700;}
+  .author__name{font-weight: 400;}
   body.homepage .flash{margin-top:81px;}
   /*
   HERO
