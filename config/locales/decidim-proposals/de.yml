@@ -752,8 +752,8 @@ de:
         index:
           collaborative_drafts_list: Greifen Sie auf gemeinsame Entwürfe zu
           new_proposal: Neuer Vorschlag
-          see_all_withdrawn: Sehen Sie sich alle zurückgezogenen Handlungsempfehlungen  an
-          view_proposal: Vorschlag anzeigen
+          see_all_withdrawn: Sehen Sie sich alle zurückgezogenen Handlungsempfehlungen an
+          view_proposal: Handlungsempfehlung anzeigen
         linked_proposals:
           proposal_votes:
             one: Abstimmung
