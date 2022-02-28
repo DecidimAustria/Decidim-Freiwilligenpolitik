@@ -35,7 +35,7 @@ body{
   .button, .card__link, .card__link:hover, .card__title:hover{text-decoration:none !important;}
   .button:hover,.process-header__hashtag a{color:$linkhoverwhite !important;}
   strong {font-weight: bolder;}
-  .side-panel__tabs .is-active a{color: $fontcolor;}
+  .side-panel__tabs .is-active a{color: $linkhovercolor;text-decoration:none;}
   /* 
   header styling 
   */
