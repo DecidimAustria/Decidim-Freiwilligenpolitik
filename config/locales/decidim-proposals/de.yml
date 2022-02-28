@@ -788,7 +788,7 @@ de:
           title: Vorschlag veröffentlichen
         proposal:
           creation_date: 'Erstellt am %{date}'
-          view_proposal: Vorschlag anzeigen
+          view_proposal: Handlungsempfehlung anzeigen
         proposals:
           empty: Es gibt noch keinen Vorschlag
           empty_filters: Es gibt keine Handlungsempfehlungen  mit diesem Kriterium
