@@ -21,7 +21,7 @@ body{
     line-height: 1.7;
     color: $fontcolor;
   }
-  a, .card__link{color: $fontcolor !important;text-decoration:underline !important;}
+  a, .card__link{color: $fontcolor;text-decoration:underline !important;}
   a:hover{color: $linkhovercolor !important; text-decoration:none !important;}
   strong {font-weight: bolder;}
   /* 
