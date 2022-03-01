@@ -1,0 +1,26 @@
+<%= render partial: "decidim/shared/component_announcement" %>
+
+<% if current_component.settings.maps_enabled? && search.results.not_online.exists? %>
+  <%= cell "decidim/meetings/meetings_map", search.results %>
+<% end %>
+
+<div class="row columns">
+  <div class="title-action">
+    <h3 id="meetings-count" class="title-action__title section-heading">
+      <%= render partial: "count" %>
+    </h3>
+
+    <% if allowed_to?(:create, :meeting) %>
+      <%= action_authorized_link_to :create, new_meeting_path, class: "title-action__action button small", data: { "redirect_url" => new_meeting_path } do %>
+        <%= t("new_meeting", scope: "decidim.meetings.meetings.index") %>
+        <%= icon "plus", role: "img", "aria-hidden": true %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div id="meetings" class="columns mediumlarge-12 large-12" aria-live="polite">
+    <%= render partial: "meetings" %>
+  </div>
+</div>
