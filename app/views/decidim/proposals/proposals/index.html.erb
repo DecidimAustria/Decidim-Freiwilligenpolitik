@@ -31,13 +31,6 @@
     <h3 id="proposals-count" class="title-action__title section-heading">
       <%= render partial: "count" %>
     </h3>
-    <% if current_settings.creation_enabled && current_component.participatory_space.can_participate?(current_user) %>
-      <%= action_authorized_link_to :create, new_proposal_path, class: "title-action__action button small", data: { "redirect_url" => new_proposal_path } do %>
-        <%= t(".new_proposal") %>
-        <%= icon "plus", role: "img", "aria-hidden": true %>
-      <% end %>
-    <% end %>
-
     <% if component_settings.collaborative_drafts_enabled? %>
       <%= link_to t(".collaborative_drafts_list"), collaborative_drafts_path, class: "title-action__action button small hollow ml-s" %>
     <% end %>
@@ -51,5 +44,16 @@
 <div class="row">
   <div class="text-right">
     <%= link_to t(".see_all_withdrawn"), proposals_path("filter[state][]" => "withdrawn") %>
+  </div>
+</div>
+<div style="clear:both;height:50px;"></div>
+<div class="row columns">
+  <div class="title-action">
+    <% if current_settings.creation_enabled && current_component.participatory_space.can_participate?(current_user) %>
+      <%= action_authorized_link_to :create, new_proposal_path, class: "title-action__action button small", data: { "redirect_url" => new_proposal_path } do %>
+        <%= t(".new_proposal") %>
+        <%= icon "plus", role: "img", "aria-hidden": true %>
+      <% end %>
+    <% end %>
   </div>
 </div>

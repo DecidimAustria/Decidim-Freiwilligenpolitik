@@ -50,6 +50,12 @@ nav.main-nav li,
 .process-nav__link{font-size:18px;}
 .process-nav__link.active{text-decoration:none !important;}
 .topbar__admin__link{display:inline-block;vertical-align: middle;margin-left:5px;}
+.topbar__admin__link.topbar__edit__link a{text-decoration:none !important;}
+.topbar__admin__link.topbar__edit__link a:hover{color:$linkhoverwhite !important;text-decoration:underline !important;}
+.topbar__notifications .icon, .topbar__conversations .icon {opacity: 1;}
+.topbar__dropmenu > ul > li > a{color:$linkhoverwhite;text-decoration:none !important;}
+.topbar__dropmenu > ul > li > a:hover{color:$linkhoverwhite !important;text-decoration:underline !important;}
+.topbar__dropmenu .is-dropdown-submenu li a{color: $fontcolor;text-decoration:none !important;text-transform: uppercase;}
 .author-data .author__name{color: $fontcolor !important;}
  @media screen and (max-width: 39.99875em){
   .title-bar {
