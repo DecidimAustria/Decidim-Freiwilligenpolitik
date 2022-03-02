@@ -26,6 +26,16 @@
   <% end %>
 <% end %>
 <%= render partial: "voting_rules" %>
+<div class="row columns">
+  <div class="title-action">
+    <h3 id="proposals-count" class="title-action__title section-heading">
+      <%= render partial: "count" %>
+    </h3>
+    <% if component_settings.collaborative_drafts_enabled? %>
+      <%= link_to t(".collaborative_drafts_list"), collaborative_drafts_path, class: "title-action__action button small hollow ml-s" %>
+    <% end %>
+  </div>
+</div>
 <div class="row">
   <div id="proposals" class="columns mediumlarge-12 large-12" aria-live="polite">
     <%= render partial: "proposals" %>
@@ -39,18 +49,11 @@
 <div style="clear:both;height:50px;"></div>
 <div class="row columns">
   <div class="title-action">
-    <h3 id="proposals-count" class="title-action__title section-heading">
-      <%= render partial: "count" %>
-    </h3>
     <% if current_settings.creation_enabled && current_component.participatory_space.can_participate?(current_user) %>
       <%= action_authorized_link_to :create, new_proposal_path, class: "title-action__action button small", data: { "redirect_url" => new_proposal_path } do %>
         <%= t(".new_proposal") %>
         <%= icon "plus", role: "img", "aria-hidden": true %>
       <% end %>
-    <% end %>
-
-    <% if component_settings.collaborative_drafts_enabled? %>
-      <%= link_to t(".collaborative_drafts_list"), collaborative_drafts_path, class: "title-action__action button small hollow ml-s" %>
     <% end %>
   </div>
 </div>
