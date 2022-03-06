@@ -41,7 +41,7 @@ variables:
 #    # - bundle exec rails test
 #    #- bundle exec pronto run -c=origin/master --exit-code
 
-deploy:
+deploy_live:
   image: ilyasemenov/gitlab-ci-git-push
   stage: deploy
   environment:
