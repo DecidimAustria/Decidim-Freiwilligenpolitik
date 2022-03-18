@@ -50,6 +50,7 @@ deploy_live:
   only:
     - live
   script:
+    - git fetch --unshallow
     - git-push ssh://dokku@decidim-freiwillig.spreademotions.com:22/$APP_NAME
 
 deploy_staging:
@@ -61,4 +62,5 @@ deploy_staging:
   only:
     - staging
   script:
+    - git fetch --unshallow
     - git-push ssh://dokku@dokku1.decidim-austria.org:22/$STAGE_APP_NAME
