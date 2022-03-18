@@ -62,4 +62,5 @@ deploy_staging:
   only:
     - staging
   script:
+    - git fetch --unshallow
     - git-push ssh://dokku@dokku1.decidim-austria.org:22/$STAGE_APP_NAME
