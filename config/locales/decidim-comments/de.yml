@@ -3,7 +3,7 @@ de:
     models:
       decidim/comments/comment_by_followed_user_event: Kommentar
       decidim/comments/comment_created_event: Kommentar
-      decidim/comments/reply_created_event: Kommentarantwort
+      decidim/comments/reply_created_event: Antwort auf Kommentar
       decidim/comments/user_group_mentioned_event: Erwähnen
       decidim/comments/user_mentioned_event: Erwähnen
   activerecord:
@@ -26,7 +26,7 @@ de:
         create:
           error: Beim Erstellen des Kommentars ist ein Fehler aufgetreten.
         delete:
-          error: Die Sendung konnte nicht gelöscht werden.
+          error: Kommentar konnte nicht gelöscht werden.
         update:
           error: Beim Erstellen des Kommentars ist ein Fehler aufgetreten.
       comments_count: Kommentaranzahl
