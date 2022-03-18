@@ -29,7 +29,7 @@ de:
         organizer_gid: Erstellt als
         organizer_id: Veranstalter
         private_meeting: Private Sitzung
-        registration_email_custom_content: Angepasster Inhalt des Registrierungs-E-Mails
+        registration_email_custom_content: Registrierungsmail anpassen
         registration_form_enabled: Anmeldeformular aktiviert
         registration_terms: Registrierungsbedingungen
         registration_url: Registrierungs-URL
@@ -43,8 +43,8 @@ de:
         meeting_agenda:
           attributes:
             base:
-              too_many_minutes: Die Dauer der Elemente überschreitet die Besprechungsdauer um %{count} Minuten
-              too_many_minutes_child: Die Dauer der Item-Childs überschreitet den Tagesordnungspunkt "%{parent_title}" Elternzeit um %{count} Minute
+              too_many_minutes: überschreitet die Besprechungsdauer um %{count} Minuten
+              too_many_minutes_child: Die Dauer des untergeordneten Elements überschreitet den Tagesordnungspunkt "%{parent_title}" um %{count} Minuten
         meeting_registration_invite:
           attributes:
             email:
@@ -92,7 +92,7 @@ de:
         new:
           copy: Kopieren
           select: Wählen Sie die Daten aus, die Sie duplizieren möchten
-          title: Doppelte Besprechung
+          title: Duplizierte Besprechung
     components:
       meetings:
         actions:
@@ -165,13 +165,13 @@ de:
       badges:
         attended_meetings:
           conditions:
-            - Registrieren Sie sich in den Sitzungen, an denen Sie teilnehmen möchten
+            - Registrieren Sie sich für die Sitzungen, an denen Sie teilnehmen möchten
           description: Dieses Abzeichen wird gewährt, wenn Sie mehrere persönliche Sitzungen besuchen.
           description_another: Dieser Benutzer hat an %{score} Sitzungen teilgenommen.
           description_own: Sie haben an %{score} Sitzungen teilgenommen.
           name: Besuchte Sitzungen
-          next_level_in: Nimm an %{score} weiteren Sitzungen teil, um das nächste Level zu erreichen!
-          unearned_another: Dieser Benutzer hat noch kein Sitzungen besucht.
+          next_level_in: Nehmen Sie an %{score} weiteren Sitzungen teil, um das nächste Level zu erreichen!
+          unearned_another: Dieser Benutzer hat noch keine Sitzungen besucht.
           unearned_own: Sie haben noch keine Sitzung besucht.
     meetings:
       actions:
@@ -193,14 +193,14 @@ de:
       admin:
         agenda:
           agenda_item:
-            add_agenda_item_child: Fügen Sie den Tagesordnungspunkt child hinzu
+            add_agenda_item_child: Fügen Sie den untergeordneten Tagesordnungspunkt hinzu
             agenda_item: Tagesordnungspunkt
-            agenda_item_children: Tagesordnungspunkt Childs
+            agenda_item_children: Untergeordneter Tagesordnungspunkt 
             down: Nieder
             remove: Löschen
             up: Oben
           agenda_item_child:
-            agenda_item_child: Tagesordnungspunkt Kind
+            agenda_item_child: Untergeordneter Tagesordnungspunkt 
             down: Nieder
             remove: Löschen
             up: Oben
@@ -228,8 +228,8 @@ de:
         invite_join_meeting_mailer:
           invite:
             decline: Einladung ablehnen
-            invited_you_to_join_a_meeting: "%{invited_by} hat Sie eingeladen, an einem Meeting um %{application}. Sie können dies über die unten stehenden Links ablehnen oder akzeptieren."
-            join: Trete dem Meeting '%{meeting_title}' bei
+            invited_you_to_join_a_meeting: "%{invited_by} hat Sie eingeladen, an einem Meeting um %{application} teilzunehmen. Sie können dies über die unten stehenden Links ablehnen oder akzeptieren."
+            join: Treten Sie dem Meeting '%{meeting_title}' bei
         invites:
           create:
             error: Beim Einladen des Nutzers in das Meeting ist ein Problem aufgetreten.
@@ -246,7 +246,7 @@ de:
               accepted: Akzeptiert
               all: Alle
               rejected: Abgelehnt
-              sent: Geschickt
+              sent: Gesendet
             filter_by: Filtern nach
             invite_attendee: Teilnehmer einladen
             invites: Lädt ein
@@ -274,7 +274,7 @@ de:
             update: Aktualisieren
           form:
             address_help: 'Adresse: wird von Geocoder zur Lokalisierung verwendet'
-            disclaimer: 'Haftungsausschluss: Durch Verwendung eines externen Registrierungssystems wissen Sie, dass die Organisatoren von %{organization} nicht für die Daten verantwortlich sind, welche die Benutzer dem externen Dienst zur Verfügung stellen.'
+            disclaimer: 'Haftungsausschluss: Durch Verwendung eines externen Registrierungssystems bestätigen Sie zu wissen, dass die Organisatoren von %{organization} nicht für die Daten verantwortlich sind, welche Sie dem externen Dienst zur Verfügung stellen.'
             location_help: 'Ort: an die Benutzer gerichtete Nachricht mit dem Treffpunkt'
             location_hints_help: 'Hinweise zum Standort: Zusätzliche Informationen. Beispiel: das Stockwerk im Gebäude wenn es eine Sitzung vor Ort ist, oder das Passwort wenn es eine Online-Sitzung mit eingeschränktem Zugriff ist.'
             online_meeting_url_help: 'Link: Erlaubt Teilnehmern, sich direkt mit Ihrem Meeting zu verbinden'
@@ -298,7 +298,7 @@ de:
             up: Oben
           services:
             add_service: Dienst hinzufügen
-            services: Dienstleistungen
+            services: Dienste
           unpublish:
             invalid: Beim Aufheben der Veröffentlichung dieser Sitzung ist ein Fehler aufgetreten
             success: Veröffentlichung der Sitzung erfolgreich rückgängig gemacht
@@ -317,13 +317,13 @@ de:
             available_slots_help: Belassen Sie es auf 0, wenn Sie unbegrenzte Plätze zur Verfügung haben.
             invites: Lädt ein
             recommendation_message: Aus Datenschutzgründen empfehlen wir, dass Sie dieses Einschreibeformular löschen, wenn es nicht länger benötigt wird. Standardmäßig ist das 3 Monate nachdem die Besprechung durchgeführt wurde.
-            registration_email_help: Dieser Text erscheint in der Mitte der Registrierungs-E-Mail, direkt nach dem Registrierungscode.
+            registration_email_help: Wenn Sie Hilfe brauchen, kontaktieren Sie freiwilligenpolitik@mitgestalten.jetzt. Wir freuen uns auf Ihre Teilnahme.
             registration_form: Anmeldeformular
             registrations_count:
               one: Es wurde %{count} registriert.
               other: Es wurden %{count} Anmeldungen vorgenommen.
             reserved_slots_help: Belassen Sie es auf 0, wenn Sie keine reservierten Slots haben
-            reserved_slots_less_than: Muss kleiner oder gleich %{count}
+            reserved_slots_less_than: Muss kleiner oder gleich %{count} sein
             title: Anmeldungen
           update:
             invalid: Beim Speichern der Registrierungseinstellungen ist ein Problem aufgetreten.
@@ -356,7 +356,7 @@ de:
         calendar_url: Kalender-URL
         close_window: Fenster schließen
         export_calendar: Kalender exportieren
-      conference_venues: Tagungsstätten
+      conference_venues: Veranstaltungsorte
       content_blocks:
         upcoming_meetings:
           name: Bevorstehende Treffen
@@ -381,7 +381,7 @@ de:
         new_meeting_at_html: "<span>Neues Treffen um %{link}</span>"
       layouts:
         live_event:
-          administrate: Administrativ
+          administrate: Administrieren
           close: Schließen
           questions: Fragen
       mailer:
@@ -447,7 +447,7 @@ de:
           address_help: 'Adresse: wird von Geocoder zur Lokalisierung verwendet'
           available_slots_help: Belassen Sie es auf 0, wenn Sie unbegrenzte Plätze zur Verfügung haben
           create_as: Besprechung erstellen als
-          disclaimer: 'Haftungsausschluss: Durch Verwendung eines externen Registrierungssystems wissen Sie, dass die Organisatoren von %{organization} nicht für die Daten verantwortlich sind, welche die Benutzer dem externen Dienst zur Verfügung stellen.'
+          disclaimer: 'Haftungsausschluss: Durch Verwendung eines externen Registrierungssystems bestätigen Sie zu wissen, dass die Organisatoren von %{organization} nicht für die Daten verantwortlich sind, welche Benutzer dem externen Dienst zur Verfügung stellen.'
           location_help: 'Ort: an die Benutzer gerichtete Nachricht mit dem Treffpunkt'
           location_hints_help: 'Standorthinweise: Zusätzliche Informationen. Beispiel: die Etage des Gebäudes, wenn es sich um eine persönliche Sitzung oder das Sitzungspasswort, wenn es sich um ein Online-Meeting mit eingeschränktem Zugriff handelt.'
           online_meeting_url_help: 'Link: Erlaubt Teilnehmern, sich direkt mit Ihrem Meeting zu verbinden'
@@ -477,11 +477,11 @@ de:
           date: Datum
           edit_meeting: Besprechung bearbeiten
           going: Sie haben sich für diese Sitzung angemeldet
-          join: Tritt dem Treffen bei
+          join: Treten Sie dem Treffen bei
           leave: Registrierung stornieren
           leave_confirmation: Sind Sie sicher dass Sie Ihre Registrierung für diese Sitzung stornieren möchten?
           meeting_minutes: Sitzungsprotokolle
-          no_slots_available: Keine Steckplätze verfügbar
+          no_slots_available: Keine Slots verfügbar
           organizations: Teilnahme an Organisationen
           registration_code_help_text: Ihr Registrierungscode
           registration_state:
@@ -506,7 +506,7 @@ de:
           status:
             accepted: Akzeptiert (%{at})
             rejected: Zurückgewiesen (%{at})
-            sent: Geschickt
+            sent: Gesendet
         meeting:
           fields:
             closed: Geschlossen
@@ -535,14 +535,14 @@ de:
           invalid: Bei diesem Meeting ist ein Problem aufgetreten.
           success: Sie sind der Sitzung erfolgreich beigetreten. Da sie sich für die Sitzung registriert haben, werden Sie benachrichtigt wenn sich an der Sitzung etwas ändert.
         decline_invitation:
-          invalid: Es ist ein Problem aufgetreten, dass die Einladung abgelehnt wurde.
+          invalid: Es ist ein Problem beim Ablehnen der Einladung aufgetreten.
           success: Sie haben die Einladung erfolgreich abgelehnt.
         destroy:
           invalid: Beim Verlassen dieses Meetings ist ein Problem aufgetreten.
           success: Sie haben das Meeting erfolgreich verlassen.
       type_of_meeting:
         hybrid: Beides
-        in_person: In Person
+        in_person: Persönlich
         online: Online
       types:
         private_meeting: Private Sitzung
@@ -575,4 +575,4 @@ de:
   devise:
     mailer:
       join_meeting:
-        subject: Einladung, an einem Meeting teilzunehmen
+        subject: Einladung zur Teilnahme an einem Meeting
