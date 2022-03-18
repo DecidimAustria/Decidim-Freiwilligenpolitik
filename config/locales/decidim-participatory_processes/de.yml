@@ -7,11 +7,11 @@ de:
         banner_image: Banner-Bild
         copy_categories: Kategorien kopieren
         copy_components: Komponenten kopieren
-        copy_steps: Phasen kopieren
+        copy_steps: Schritte kopieren
         decidim_area_id: Bereich
         description: Beschreibung
         developer_group: Promoter-Gruppe
-        domain: Domäne
+        domain: Domain
         end_date: Enddatum
         hashtag: Hashtag
         hero_image: Hauptbild
@@ -67,8 +67,8 @@ de:
             document:
               invalid_document_type: 'Ungültiger Dokumenttyp. Zulässige Formate sind: %{valid_mime_types}'
     models:
-      decidim/participatory_process_step_activated_event: Phase aktiviert
-      decidim/participatory_process_step_changed_event: Phase geändert
+      decidim/participatory_process_step_activated_event: Schritt aktiviert
+      decidim/participatory_process_step_changed_event: Schritt geändert
   activerecord:
     models:
       decidim/participatory_process:
@@ -78,8 +78,8 @@ de:
         one: Prozessgruppe
         other: Prozessgruppen
       decidim/participatory_process_step:
-        one: Phase
-        other: Phasen
+        one: Schritt
+        other: Schritte
   decidim:
     admin:
       actions:
@@ -95,7 +95,7 @@ de:
         import_process: Importieren
         new_process: Neuer Beteiligungsprozess
         new_process_group: Neue Prozessgruppe
-        new_process_step: Neue Phase
+        new_process_step: Neuer Schritt
         new_process_user_role: Neuer Prozess-Administrator
         preview: Vorschau
         publish: Veröffentlichen
@@ -147,7 +147,7 @@ de:
             admin: Administrator
             collaborator: Mitarbeiter
             moderator: Moderator
-            valuator: Schätzer
+            valuator: Bewerter
         user:
           fields:
             invitation_accepted_at: Einladung akzeptiert am
@@ -167,7 +167,7 @@ de:
       participatory_process_groups:
         destroy:
           error: Beim Löschen der Beteiligungsprozessgruppe ist ein Fehler aufgetreten.
-          success: Beteiligungsprozess erfolgreich gelöscht.
+          success: Beteiligungsprozessgruppe erfolgreich gelöscht.
         edit:
           title: Prozessgruppe bearbeiten
           update: Aktualisieren
@@ -205,7 +205,7 @@ de:
           error:
             active_step: Der aktive Schritt kann nicht gelöscht werden.
             last_step: Der letzte Schritt eines Beteiligungsprozesses kann nicht gelöscht werden.
-          success: Participatory-Prozessschritt erfolgreich gelöscht
+          success: Prozessschritt erfolgreich gelöscht
         edit:
           title: Beteiligungsschritt bearbeiten
           update: Aktualisieren
@@ -213,12 +213,12 @@ de:
           steps_title: Schritte
         new:
           create: Erstellen
-          title: Neuer partizipativer Prozessschritt
+          title: Neuer Prozessschritt
         ordering:
           error: Beim Neuanordnen dieser partizipativen Prozessschritte ist ein Fehler aufgetreten.
         update:
           error: Beim Aktualisieren dieses partizipativen Prozessschritts ist ein Fehler aufgetreten.
-          success: Partizipativer Prozessschritt erfolgreich aktualisiert.
+          success: Prozessschritt erfolgreich aktualisiert.
       participatory_process_user_roles:
         create:
           error: Beim Hinzufügen eines Benutzers für diesen partizipativen Prozess ist ein Fehler aufgetreten.
@@ -252,7 +252,7 @@ de:
           title: Neuer partizipativer Prozess
         update:
           error: Beim Aktualisieren dieses Beteiligungsprozesses ist ein Fehler aufgetreten.
-          success: Participatory-Prozess erfolgreich aktualisiert.
+          success: Partizipativer Prozess erfolgreich aktualisiert.
       participatory_processes_copies:
         create:
           error: Beim Duplizieren dieses Beteiligungsprozesses ist ein Fehler aufgetreten.
@@ -267,7 +267,7 @@ de:
       users:
         resend_invitation:
           error: Beim erneuten Senden der Einladung ist ein Fehler aufgetreten.
-          success: Einladung wird erfolgreich erneut gesendet.
+          success: Einladung wurde erfolgreich erneut gesendet.
     admin_log:
       participatory_process:
         create: "%{user_name} hat den Partizipationsprozess %{resource_name} erstellt"
@@ -456,7 +456,7 @@ de:
     decidim:
       participatory_process_groups:
         participatory_process_group:
-          browse: Durchsuche
+          browse: Durchsuchen
           browse_resource: Prozessgruppe %{resource_name} durchsuchen
           processes_count: 'Beteiligungsprozesse:'
       participatory_process_widgets:
