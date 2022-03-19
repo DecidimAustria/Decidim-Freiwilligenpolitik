@@ -681,7 +681,7 @@ de:
           fields:
             category: Kategorie
             comments: Bemerkungen
-            id: ICH WÜRDE
+            id: ID
             notes: Anmerkungen
             official_proposal: Offizielle Handlungsempfehlung
             published_answer: Veröffentlichte Antwort
@@ -769,6 +769,7 @@ de:
           most_voted: Am meisten unterstützt
           random: Zufällig
           recent: Kürzlich hinzugefügt
+          position: Reihenfolge
           with_more_authors: Mit mehr Autoren
         participatory_texts:
           index:
