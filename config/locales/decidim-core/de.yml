@@ -98,6 +98,7 @@ de:
         error: Beim Löschen Ihres Kontos ist ein Fehler aufgetreten.
         success: Ihr Konto wurde erfolgreich gelöscht.
       show:
+        available_locales_helper: Wählen Sie die Sprache mit der Sie Decidim verwenden und Benachrichtigungen erhalten wollen
         change_password: Passwort ändern
         update_account: Konto aktualisieren
       update:
