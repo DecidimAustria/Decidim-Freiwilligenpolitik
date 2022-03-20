@@ -25,6 +25,8 @@ gem "sidekiq"
 
 gem "sentry-raven"
 
+gem "omniauth-rails_csrf_protection", "~> 1.0.0"
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
