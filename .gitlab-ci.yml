@@ -3,7 +3,7 @@ stages:
   - deploy
 
 variables:
-  APP_NAME: freiwillig
+  APP_NAME: freiwilligenpolitik
   STAGE_APP_NAME: freiwillig-staging
 
 #test:
@@ -41,16 +41,16 @@ variables:
 #    # - bundle exec rails test
 #    #- bundle exec pronto run -c=origin/master --exit-code
 
-deploy:
+deploy_live:
   image: ilyasemenov/gitlab-ci-git-push
   stage: deploy
   environment:
     name: production
-    url: https://freiwillig.decidim-austria.org/
+    url: https://freiwilligenpolitik.mitgestalten.jetzt/
   only:
     - live
   script:
-    - git-push ssh://dokku@dokku1.decidim-austria.org:22/$APP_NAME
+    - git-push ssh://dokku@decidim-freiwillig.spreademotions.com:22/$APP_NAME
 
 deploy_staging:
   image: ilyasemenov/gitlab-ci-git-push
