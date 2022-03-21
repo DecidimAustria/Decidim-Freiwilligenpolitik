@@ -5,7 +5,7 @@ Decidim.configure do |config|
   config.application_name = "Beteiligungsprozess zum Freiwilligengesetz"
 
   # The email that will be used as sender in all emails from Decidim
-  config.mailer_sender = "hello@mitgestalten.jetzt"
+  config.mailer_sender = "freiwilligenpolitik@mitgestalten.jetzt"
 
   # Sets the list of available locales for the whole application.
   #
