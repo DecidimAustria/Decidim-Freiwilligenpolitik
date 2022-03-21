@@ -93,7 +93,7 @@ de:
           recent: Kürzlich hinzugefügt
         title: 'Sortieren nach:'
       comment_thread:
-        title: Konversation mit %{authorName}
+        title: Rückmeldung zur Handlungsempfehlung
       comments:
         blocked_comments_for_unauthorized_user_warning: Sie müssen aktuell verifiziert sein um zu kommentieren, aber Sie können die bisherigen Kommentare lesen.
         blocked_comments_for_user_warning: Sie können momentan nichts kommentieren, aber Sie können die vorherigen lesen.
