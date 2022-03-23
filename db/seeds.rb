@@ -27,11 +27,11 @@ if !Rails.env.production? || ENV["SEED"]
       table.tr("_", "/").classify.safe_constantize
     end.compact.each(&:reset_column_information)
   
-    smtp_label = ENV["SMTP_FROM_LABEL"] || "Beteiligungsprozess zum Freiwilligengesetz"
-    smtp_email = ENV["SMTP_FROM_EMAIL"] || "hello@mitgestalten.jetzt"
+    smtp_label = ENV["SMTP_FROM_LABEL"] || "freiwilligenpolitik.mitgestalten.jetzt"
+    smtp_email = ENV["SMTP_FROM_EMAIL"] || "freiwilligenpolitik@mitgestalten.jetzt"
   
     organization = Decidim::Organization.first || Decidim::Organization.create!(
-      name: "Beteiligungsprozess zum Freiwilligengesetz",
+      name: "freiwilligenpolitik.mitgestalten.jetzt",
     #   twitter_handler: Faker::Hipster.word,
     #   facebook_handler: Faker::Hipster.word,
     #   instagram_handler: Faker::Hipster.word,
