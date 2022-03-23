@@ -2,7 +2,7 @@
 
 Decidim.configure do |config|
   # The name of the application
-  config.application_name = "Beteiligungsprozess zum Freiwilligengesetz"
+  config.application_name = "freiwilligenpolitik.mitgestalten.jetzt"
 
   # The email that will be used as sender in all emails from Decidim
   config.mailer_sender = "freiwilligenpolitik@mitgestalten.jetzt"
