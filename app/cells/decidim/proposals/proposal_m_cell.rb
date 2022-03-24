@@ -75,6 +75,8 @@ module Decidim
       end
 
       def creation_date_status
+        return "" if model.published_at < "2022-04-07"
+
         explanation = tag.strong(t("activemodel.attributes.common.created_at"))
         "#{explanation}<br>#{l(model.published_at.to_date, format: :decidim_short)}"
       end
