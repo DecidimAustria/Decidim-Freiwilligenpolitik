@@ -1778,6 +1778,7 @@ de:
       edit_link:
         edit: Bearbeiten
       footer:
+        menu_name : Footer Menü
         cc_by_license: Creative Commons Lizenz
         decidim_logo: Decidim-Logo
         download_open_data: Open Data Dateien herunterladen
@@ -1803,6 +1804,7 @@ de:
         twitter: "%{organization} bei Twitter"
         youtube: "%{organization} auf YouTube"
       user_menu:
+        menu_name: 'Benutzermenü'
         account: 'Benutzerkonto: %{name}'
         admin_dashboard: Admin-Dashboard
         conversations: Direktnachrichten
