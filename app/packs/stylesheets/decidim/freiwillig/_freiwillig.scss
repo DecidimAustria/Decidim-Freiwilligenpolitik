@@ -30,11 +30,26 @@ h5, .h5,
 h6, .h6 {font-family: $fontface;}
 a, .card__link{color: $fontcolor;}
 a{text-decoration:underline !important;}
-a:hover{color: $linkhovercolor !important; text-decoration:none !important;}
-.button, .card__link, .card__link:hover, .card__title:hover{text-decoration:none !important;}
-.button:hover,.process-header__hashtag a{color:$linkhoverwhite !important;}
+a:hover{
+    color: $linkhovercolor !important; 
+    text-decoration:none !important;
+}
+p{
+    text-align: justify;
+    hyphens: auto;
+}
+.button, 
+.card__link, 
+.card__link:hover, 
+.card__title:hover{text-decoration:none !important;}
+.button:hover,
+.process-header__hashtag a{color:$linkhoverwhite !important;}
 strong {font-weight: bolder;}
-.side-panel__tabs .tabs-title.is-active > [role=tab], .side-panel__tabs .tabs-title.is-active > a{color: $linkhovercolor;text-decoration:none !important;}
+.side-panel__tabs .tabs-title.is-active > [role=tab], 
+.side-panel__tabs .tabs-title.is-active > a{
+    color: $linkhovercolor;
+    text-decoration:none !important;
+}
 .title-bar .skip{color:$linkhoverwhite;}
 /* HEADER */
 .header{background:rgba(0, 0, 0, 1);}
@@ -46,22 +61,48 @@ nav.main-nav li,
 .main-nav__link--active a, 
 .main-nav__link--active a:hover,
 .topbar__user__login a,
-.topbar__user__login a:hover{font-weight: 700;text-decoration:none !important;color:$linkhoverwhite !important;border:none;box-shadow:none;background:none;}
-.process-nav__link{font-size:18px;}
-.process-nav__link.active{text-decoration:none !important;}
+.topbar__user__login a:hover{
+    font-weight: 700;
+    text-decoration:none !important;
+    color:$linkhoverwhite !important;
+    border:none;
+    box-shadow:none;
+    background:none;
+}
+.process-nav__link {font-size:18px;}
+.process-nav__link.active {text-decoration:none !important;}
 div.topbar__search input {background-color: #fafafa;color: #3d393c;}
 div.topbar__search ::placeholder {color: #808080;}
-div.topbar__user__login a,div.topbar__dropmenu>ul>li>a {color: #3d393c;}
+div.topbar__user__login a,
+div.topbar__dropmenu>ul>li>a {color: #3d393c;}
 div.topbar__dropmenu>ul>li>a::after {color: #3d393c !important;}
 div.topbar__search:not(:focus-within) button {background-color: #ededed;}
 div.topbar__search:not(:focus-within) button {color: #3d393c;}
-.topbar__admin__link{display:inline-block;vertical-align: middle;margin-left:5px;}
+.topbar__admin__link{
+    display:inline-block;
+    vertical-align: middle;
+    margin-left:5px;
+}
 .topbar__admin__link.topbar__edit__link a{text-decoration:none !important;}
-.topbar__admin__link.topbar__edit__link a:hover{color:$linkhoverwhite !important;text-decoration:underline !important;}
-.topbar__notifications .icon, .topbar__conversations .icon {opacity: 1;}
-.topbar__dropmenu > ul > li > a{color:$linkhoverwhite;text-decoration:none !important;}
-.topbar__dropmenu > ul > li > a:hover{color:$linkhoverwhite !important;text-decoration:underline !important;}
-.topbar__dropmenu .is-dropdown-submenu li a{color: $fontcolor;text-decoration:none !important;text-transform: uppercase;}
+.topbar__admin__link.topbar__edit__link a:hover{
+    color:$linkhoverwhite !important;
+    text-decoration:underline !important;
+}
+.topbar__notifications .icon, 
+.topbar__conversations .icon {opacity: 1;}
+.topbar__dropmenu > ul > li > a{
+    color:$linkhoverwhite;
+    text-decoration:none !important;
+}
+.topbar__dropmenu > ul > li > a:hover{
+    color:$linkhoverwhite !important;
+    text-decoration:underline !important;
+}
+.topbar__dropmenu .is-dropdown-submenu li a{
+    color: $fontcolor;
+    text-decoration:none !important;
+    text-transform: uppercase;
+}
 .author-data .author__name{color: $fontcolor !important;}
 .card__title{font-weight: 700;}
 .author__name{font-weight: 400;}
@@ -96,17 +137,29 @@ body.homepage .flash{margin-top:81px;}
 .prozess_phase{
     padding: 4rem 0;
     text-align:center;
-    h2 {
+    h2, span.subtitle {
         font-weight: 700;
-    font-size:3.5rem;
-    line-height:3.5rem;
-    color: $linkhovercolor;
-    margin:2px 0 2px 0;
+        line-height:3.5rem;
+        color: $linkhovercolor;
+        margin:2px 0 2px 0;
+    }
+    h2{
+        font-size:3.5rem;
+    }
+    h2::before,
+    h2::after {
+        display: inline-block;
+        content: "";
+        border-top: .3rem solid #b3161e;
+        width: 20rem;
+        margin: 0 2.5rem;
+        transform: translateY(-1rem);
+    }
+    span.subtitle{
+        font-size:1.75rem;
     }
 }
-span.subtitle{
-    font-size:1.75rem;
-}
+
 ol.prozess_phasen{
     list-style:none;
     margin:20px 0 0 0;
@@ -168,13 +221,20 @@ div.main-footer {background-color: #fff;}
         align-items: center;
         justify-content: center;
     }
+    .row:first-child{
+        margin-top:2rem; 
+        margin-bottom:2rem;
+    }
     a{color:$fontcolor; }
 }
-a.small_logo, a.small_logo img, a.small_logo:hover{text-decoration:none !important;}
+.mitgestalten_logo{padding:0 2rem 0 2rem;}
+a.small_logo, 
+a.small_logo img, 
+a.small_logo:hover{text-decoration:none !important;}
 .small_logo img{height:1.5rem;margin:0 5px 0 5px;}
-.mitgestalten_logo{height:75px;}
 /* REGISTRATION */
-h2.register_form_h3, .register_form h2 {
+h2.register_form_h3, 
+.register_form h2 {
     display: table;
     font-size: 1.25em;
     line-height: 1.2;
@@ -188,7 +248,3 @@ h2.register_form_h3, .register_form h2 {
      .card__button,.secondary{color:$fontcolor;}
 }
 .callout.secondary {background-color: none;}
-.lead{
-    text-align: justify;
-    hyphens: auto;
-}
