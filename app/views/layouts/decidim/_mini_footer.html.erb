@@ -1,9 +1,19 @@
 <div class="mini-footer">
   <div class="row">
     <a rel="decidim noopener"
+        href="https://www.sozialministerium.at/"
+        target="_blank">
+      <%= image_pack_tag("media/images/BMSGPK_Logo.png", alt: "Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz", class: "mitgestalten_logo", role: "img") %>
+    </a>
+    <a rel="decidim noopener"
+        href="https://gemeinnuetzig.at/"
+        target="_blank">
+      <%= image_pack_tag("media/images/IGO_Logo.png", alt: "IGO: Interessenvertretung Gemeinnütziger Organisationen", class: "mitgestalten_logo", role: "img") %>
+    </a>
+    <a rel="decidim noopener"
         href="https://partizipationsbuero.at/"
         target="_blank">
-      <%= image_pack_tag("media/images/mitgestalten-logo_schwarz.png", alt: t("layouts.decidim.footer.mitgestalten_logo"), class: "mitgestalten_logo") %>
+      <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: t("layouts.decidim.footer.mitgestalten_logo"), class: "mitgestalten_logo", role: "img") %>
     </a>
   </div>
   <div class="row">
@@ -11,12 +21,12 @@
       <a rel="decidim noopener" class="small_logo"
            href="https://decidim.org/"
            target="_blank">
-        <%= image_pack_tag("media/images/decidim-logo-mobile.svg", alt: t("layouts.decidim.footer.decidim_logo")) %>
+        <%= image_pack_tag("media/images/decidim-logo-mobile.svg", alt: t("layouts.decidim.footer.decidim_logo"), role: "img") %>
       </a>
       <a rel="license noopener" class="cc-badge small_logo"
          href="http://creativecommons.org/licenses/by-sa/4.0/"
          target="_blank">
-        <%= image_pack_tag("media/images/cc-by-sa.svg", alt: t("layouts.decidim.footer.cc_by_license")) %>
+        <%= image_pack_tag("media/images/cc-by-sa.svg", alt: t("layouts.decidim.footer.cc_by_license"), role: "img") %>
       </a>
       <%= t("layouts.decidim.footer.made_with_open_source").html_safe %>
     </div>
