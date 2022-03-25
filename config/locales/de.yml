@@ -1780,6 +1780,7 @@ de:
       footer:
         menu_name : Footer Menü
         cc_by_license: Creative Commons Lizenz
+        mitgestalten_logo: Link zu Mitgestalten Partezipationsbüro
         decidim_logo: Decidim-Logo
         download_open_data: Open Data Dateien herunterladen
         made_with_open_source: Website mit <a target="_blank" href="https://github.com/decidim/decidim">freier Software erstellt</a>.
