@@ -247,4 +247,9 @@ h2.register_form_h3,
      .icon{fill:$fontcolor;}
      .card__button,.secondary{color:$fontcolor;}
 }
-.callout.secondary {background-color: none;}
+.callout.secondary {
+    background-color: none;
+    border:none;
+}
+/* PAGES */
+.no_underline{text-decoration:none !important;}
