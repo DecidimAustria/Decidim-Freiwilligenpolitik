@@ -47,6 +47,7 @@ strong {font-weight: bolder;}
     text-decoration:none !important;
 }
 .title-bar .skip{color:$linkhoverwhite;}
+.nickname{color:$fontcolor;}
 /* HEADER */
 .header{background:rgba(0, 0, 0, 1);}
 .title-bar, .navbar{background:none;}
@@ -102,7 +103,6 @@ div.topbar__search:not(:focus-within) button {color: #3d393c;}
 .author-data .author__name{color: $fontcolor !important;}
 .card__title{font-weight: 700;}
 .author__name{font-weight: 400;}
-body.homepage .flash{margin-top:81px;}
 .process-header__hashtag {
     font-weight: 300;
 }
@@ -119,6 +119,7 @@ body.homepage .flash{margin-top:81px;}
 .hero{
     background-size: cover;
     background-position: center center;
+    background-color: #222 !important;
 }
 .hero::after{display: none;}
 @media print, screen and (min-width: 64em){
@@ -185,8 +186,12 @@ ol.prozess_phasen{
 }
 .prozess_info{
     flex-grow:1;
-    h3{
+    span.title{
+        font-weight: 700;
+        font-size:1.4rem;
+        line-height:1.6rem;
         color: $linkhovercolor;
+        margin:2px 0 2px 0;
     }
 }
 
@@ -244,7 +249,7 @@ h2.register_form_h3,
      .card__button,.secondary{color:$fontcolor;}
 }
 .callout.secondary {
-    background-color: none;
+    background-color: unset;
     border:none;
 }
 /* PAGES */
