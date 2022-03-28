@@ -16,7 +16,7 @@ de:
         video_url: Video-URL
       meeting:
         address: Adresse
-        available_slots: Verfügbare Slots für dieses Meeting
+        available_slots: Verfügbare Plätze für dieses Meeting
         customize_registration_email: Registrierungs-E-Mail anpassen
         decidim_category_id: Kategorie
         decidim_scope_id: Umfang
@@ -48,7 +48,7 @@ de:
         meeting_registration_invite:
           attributes:
             email:
-              already_invited: Diese E-Mail wurde bereits eingeladen
+              already_invited: Inhaber dieser E-Mail wurde bereits eingeladen
     models:
       decidim/meetings/close_meeting_event: Sitzung geschlossen
       decidim/meetings/create_meeting_event: Sitzung
@@ -137,10 +137,10 @@ de:
         meeting_registration_confirmed:
           notification_title: Ihre Anmeldung zur Sitzung <a href="%{resource_url}">%{resource_title}</a> wurde bestätigt. Ihr Registrierungscode ist %{registration_code}.
         meeting_registrations_over_percentage:
-          email_intro: Die Slots der Sitzung "%{resource_title}" sind zu über %{percentage}% belegt.
+          email_intro: Die Plätze der Sitzung "%{resource_title}" sind zu über %{percentage}% belegt.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator des Teilnahmebereichs der Besprechung sind.
-          email_subject: Slots der Sitzung "%{resource_title}" über %{percentage}% belegt
-          notification_title: Die Slots der Sitzung <a href="%{resource_path}">%{resource_title}</a> sind zu über %{percentage}% belegt.
+          email_subject: Plätze der Sitzung "%{resource_title}" über %{percentage}% belegt
+          notification_title: Die Plätze der Sitzung <a href="%{resource_path}">%{resource_title}</a> sind zu über %{percentage}% belegt.
         meeting_updated:
           email_intro: 'Die Sitzung "%{resource_title}" wurde aktualisiert. Sie können die neue Version auf der Sitzungs-Seite lesen:'
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie der Sitzung "%{resource_title}" folgen. Falls Sie keine solchen Benachrichtigungen mehr erhalten möchten, besuchen Sie den obigen Link.
@@ -303,11 +303,11 @@ de:
             invalid: Beim Aufheben der Veröffentlichung dieser Sitzung ist ein Fehler aufgetreten
             success: Veröffentlichung der Sitzung erfolgreich rückgängig gemacht
           update:
-            invalid: Beim Aktualisieren dieses Meetings ist ein Problem aufgetreten
+            invalid: Beim Aktualisieren dieser Sitzung ist ein Problem aufgetreten
             success: Sitzung erfolgreich aktualisiert
         models:
           meeting:
-            name: Treffen
+            name: Sitzung
         registrations:
           edit:
             save: Speichern
@@ -322,7 +322,7 @@ de:
             registrations_count:
               one: Es wurde %{count} registriert.
               other: Es wurden %{count} Anmeldungen vorgenommen.
-            reserved_slots_help: Belassen Sie es auf 0, wenn Sie keine reservierten Slots haben
+            reserved_slots_help: Belassen Sie es auf 0, wenn Sie keine reservierten Plätze haben
             reserved_slots_less_than: Muss kleiner oder gleich %{count} sein
             title: Anmeldungen
           update:
@@ -467,7 +467,7 @@ de:
           create: Erstellen
           title: Ihre Besprechung erstellen
         registration_confirm:
-          cancel: Stornieren
+          cancel: Abbrechen
           confirm: Bestätigen
         show:
           attendees: Teilnehmer zählen
@@ -477,11 +477,11 @@ de:
           date: Datum
           edit_meeting: Besprechung bearbeiten
           going: Sie haben sich für diese Sitzung angemeldet
-          join: Treten Sie dem Treffen bei
-          leave: Registrierung stornieren
-          leave_confirmation: Sind Sie sicher dass Sie Ihre Registrierung für diese Sitzung stornieren möchten?
+          join: Anmelden
+          leave: Registrierung abbrechen
+          leave_confirmation: Sind Sie sicher dass Sie Ihre Registrierung für diese Sitzung abbrechen möchten?
           meeting_minutes: Sitzungsprotokolle
-          no_slots_available: Keine Slots verfügbar
+          no_slots_available: Keine Plätze verfügbar
           organizations: Teilnahme an Organisationen
           registration_code_help_text: Ihr Registrierungscode
           registration_state:
@@ -546,7 +546,7 @@ de:
         online: Online
       types:
         private_meeting: Private Sitzung
-        transparent: Transparent
+        transparent: Sichtbar
       versions:
         back_to_resource: Zurück zur Besprechung
       withdraw:
