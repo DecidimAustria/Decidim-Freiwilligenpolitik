@@ -5,7 +5,7 @@
           <%= organization_description %>
         </h2>
         <% unless current_user %>
-          <%= link_to decidim.new_user_registration_path, class: "button--sc large button", title: t("decidim.pages.home.sub_hero.register_title") do %>
+          <%= link_to decidim.new_user_registration_path, class: "button--sc large button" do %>
             <%= t("decidim.pages.home.sub_hero.register") %>
           <% end %>
         <% end %>
