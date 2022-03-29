@@ -1,21 +1,57 @@
-<section class="extended home-section" id="html-block">
-  <img src="/FreiwG_Prozessinfo.png" alt="Grafik über den Ablauf des Beteiligungsprozesses" longdesc="#longdesc">
-  <div class="infographik">
-    <div id="longdesc" class="sr_only">
-      <h1>ABLAUF</h1>
-      <h2>Reden Sie mit</h2>
-      <h3>Zivilgesselschafltiche Empfehlungen zur Freiwilligenpolitik</h3>
-      <ol>
-        <li>Wissenschaftliche Evaluierung: Erarbeitung von 10 Empfehlungen zur Novellierung des Freiwilligengesetzes mittels u.a. xx Interviews</li>
-        <li>Kick-Off: Veranstaltung zur Präsentation und Diskussion der 10 erarbeiteten Empfehlungen.</li>
-        <li>Online-Diskussion: Online-Diskussion und Vertiefung der erarbeiteten Empfehlungen.</li>
-        <li>Bewertung: Bewertung und Reihung der überarbeiteten Empfehlungen.</li>
-        <li>Videokonferenz: Präsentation der Ergebnisse und weiteres Vorgehen.</li>
-        <li>Bericht: Abschlussbericht für Ministerium und Nationalrat.</li>
-      </ol>
-    </div>  
+<section class="extended home-section prozess_phase" id="prozess_phasen">
+  <div class="row">
+    <nav id="prozess_phasen_nav" role="navigation">
+    <h2>ABLAUF</h2>
+    <span class="subtitle">REDEN SIE MIT!</span>
+    <ol class="prozess_phasen">
+      <li class="prozess_phasen_list">
+        <a href="/pages/auftaktveranstaltung">
+        <%= image_pack_tag("media/images/icon_process_step_1.svg", role:"presentation", alt: "1. Auftaktveranstaltung") %>
+        <div class="prozess_step">1.</div>
+        <div class="prozess_info">
+          <span class="title">Auftaktveranstaltung</span>
+        </div>
+        </a>
+      </li>
+      <li class="prozess_phasen_list">
+        <a href="/pages/onlinediskussion">
+        <%= image_pack_tag("media/images/icon_process_step_2.svg", role:"presentation", alt: "2. Online-Diskussion") %>
+        <div class="prozess_step">2.</div>
+        <div class="prozess_info">
+          <span class="title">Online-Diskussion</span>
+        </div>
+        </a>
+      </li>
+      <li class="prozess_phasen_list">
+        <a href="/pages/ranking">
+        <%= image_pack_tag("media/images/icon_process_step_3.svg", role:"presentation", alt: "3. Ranking") %>
+        <div class="prozess_step">3.</div>
+        <div class="prozess_info">
+          <span class="title">Ranking</span>
+        </div>
+        </a>
+      </li>
+      <li class="prozess_phasen_list">
+        <a href="/pages/abschluss">
+        <%= image_pack_tag("media/images/icon_process_step_4.svg", role:"presentation", alt: "4. Abschlusskonferenz und Abschlussbericht") %>   
+        <div class="prozess_step">4.</div>
+        <div class="prozess_info">
+          <span class="title">Abschlusskonferenz und Abschlussbericht</span>
+        </div>
+        </a>
+      </li>
+    </ol>
+  </nav>
   </div>
+</section>
+<%
+unless html_content.to_s.strip.empty?
+%>
+<section class="extended home-section" id="html-block">
   <div class="home_htmlcontent">
     <%= html_content %>
   </div>
 </section>
+<%
+end
+%>

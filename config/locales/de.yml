@@ -924,11 +924,11 @@ de:
       no_followings: Folgt noch niemandem oder irgendetwas.
     follows:
       create:
-        button: Folgen
+        button: FOLGEN
         error: Beim Folgen dieser Ressource ist ein Fehler aufgetreten.
         participatory_space: Folge bereits <span class="show-for-sr">%{resource_name}</span>
       destroy:
-        button: Entfolgen
+        button: ENTFOLGEN
         error: Beim Entfolgen dieser Ressource ist ein Fehler aufgetreten.
     forms:
       current_file: Aktuelle Datei
@@ -1780,6 +1780,7 @@ de:
       footer:
         menu_name : Footer Menü
         cc_by_license: Creative Commons Lizenz
+        mitgestalten_logo: Link zu Mitgestalten Partezipationsbüro
         decidim_logo: Decidim-Logo
         download_open_data: Open Data Dateien herunterladen
         made_with_open_source: Website mit <a target="_blank" href="https://github.com/decidim/decidim">freier Software erstellt</a>.
