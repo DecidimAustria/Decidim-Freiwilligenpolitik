@@ -257,6 +257,23 @@ h2.register_form_h3,
 /* PAGES */
 .no_underline{text-decoration:none !important;}
 
+/* REGISTRATION / SOCIAL BUTTONS */
+.social-register .button--social{text-transform: uppercase;color:$fontcolor;}
+.button--twitter, .button--twitter:hover {
+    background-color: unset;
+    border: 1px solid var(--twitter);
+}
+.button--facebook, .button--facebook:hover {
+    background-color: unset;
+    border: 1px solid var(--facebook);
+}
+.button--google, .button--google:hover {
+    background-color: unset;
+    border: 1px solid var(--google);
+}
+.register__separator {
+    font-style:normal;
+}
 /* MEDIA QUERIES */
 @media print, screen and (min-width: 64em){
     .hero__container {
