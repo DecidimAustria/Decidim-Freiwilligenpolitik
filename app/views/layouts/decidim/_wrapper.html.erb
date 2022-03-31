@@ -63,10 +63,12 @@ end
                 <% if current_user %>
                 <nav class="topbar__dropmenu topbar__user__logged" aria_label="<%= t("layouts.decidim.user_menu.menu_name")%>">
                   <%= link_to decidim.notifications_path, class: "topbar__notifications #{current_user.notifications.any? ? "is-active" : ""}" do %>
-                    <%= icon "bell", role: "img", aria_label: t("layouts.decidim.user_menu.notifications") %>
+                    <span class="show-for-sr"><%=t("layouts.decidim.user_menu.notifications")%></span>
+                    <%= icon "bell", role: "presentation"%>
                   <% end %>
                   <%= link_to decidim.conversations_path, class: "topbar__conversations #{current_user.unread_conversations.any? ? "is-active" : ""}" do %>
-                    <%= icon "envelope-closed", role: "img", aria_label: t("layouts.decidim.user_menu.conversations") %>
+                    <span class="show-for-sr"><%=t("layouts.decidim.user_menu.conversations")%></span>
+                    <%= icon "envelope-closed", role: "presentation"%>
                   <% end %>
                   <ul class="dropdown menu" data-dropdown-menu
                     data-autoclose="false"

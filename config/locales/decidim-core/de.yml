@@ -697,7 +697,7 @@ de:
       create:
         button: Folgen
         error: Beim Folgen dieses Inhalts ist ein Fehler aufgetreten.
-        participatory_space: Sie folgen <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Sie folgen dem Beteiligungsprozess
       destroy:
         button: Entfolgen
         error: Beim Entfolgen dieses Inhalts ist ein Fehler aufgetreten.
