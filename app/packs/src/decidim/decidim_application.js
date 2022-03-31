@@ -15,19 +15,10 @@ https://github.com/quilljs/quill/issues/1173
 Solve accessibility issue of Quill Editor by setting aria-label to the buttons
 */
 
-function applyAccessibilityHacks(editor) {
-
-	// Get ref to the toolbar, its not available through the quill api ughh
-	const query = $('.ql-toolbar');
-	if (query.length !== 1) {
-		// No toolbars found OR multiple which is not what we expect either
-		return;
-	}
-
-	const toolBar = query[0];
+function applyAccessibilityHacks() {
 
 	// apply aria labels to base buttons
-	const buttons = toolBar.getElementsByTagName('button');
+	const buttons = $('.ql-toolbar').getElementsByTagName('button');
 	for (let i = 0; i < buttons.length; i++) {
 		const button = buttons[i];
 		const className = button.getAttribute('class').toLowerCase();
