@@ -122,10 +122,11 @@ function applyAccessibilityHacks() {
 	}
 }
 
+/*
 $(document).ready(function(){
     applyAccessibilityHacks();
 });
-
+*/
 
 /* solve share button problems */
 /*
