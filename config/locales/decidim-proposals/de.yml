@@ -140,7 +140,7 @@ de:
             new_proposal_body_template: Textvorlage für neue Handlungsempfehlung
             new_proposal_body_template_help: Sie können den vorgefüllten Text der neuen Handlungsempfehlungen bestimmen
             new_proposal_help_text: Hilfetext für neue Handlungsempfehlungen 
-            official_proposals_enabled: Offizielle Handlungsempfehlungen aktiviert
+            official_proposals_enabled: Handlungsempfehlungen aktiviert
             participatory_texts_enabled: Partizipative Texte aktiviert
             participatory_texts_enabled_readonly: Die Interaktion mit dieser Einstellung ist nicht möglich, wenn Handlungsempfehlungen bestehen. Bitte erstellen Sie eine neue „Vorschlagskomponente“, wenn Sie diese Funktion aktivieren möchten, oder verwerfen Sie alle importierten Handlungsempfehlungen im Menü „Beteiligungstexte“, wenn Sie diese Funktion deaktivieren möchten.
             proposal_answering_enabled: Handlungsempfehlungsantworten aktiviert
@@ -683,7 +683,7 @@ de:
             comments: Bemerkungen
             id: ID
             notes: Anmerkungen
-            official_proposal: Offizielle Handlungsempfehlung
+            official_proposal: Handlungsempfehlung aus Evaluierung
             published_answer: Veröffentlichte Antwort
             published_at: Veröffentlicht unter
             scope: Umfang
