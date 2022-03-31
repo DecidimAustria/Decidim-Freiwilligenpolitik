@@ -1438,8 +1438,8 @@ de:
           Ihr Konto wird erst erstellt, wenn Sie auf den obigen Link zugreifen und Ihren Benutzernamen und Ihr Passwort festlegen.
         invited_you_as_admin: "%{invited_by} hat dich als Admin von %{application} eingeladen. Sie können die Einladung über den folgenden Link akzeptieren."
         invited_you_as_private_user: "%{invited_by} hat dich als privaten Benutzer von %{application} eingeladen. Sie können die Einladung über den folgenden Link akzeptieren."
-        someone_invited_you: Jemand hat dich zu %{application} eingeladen. Sie können die Einladung über den folgenden Link akzeptieren.
-        someone_invited_you_as_admin: Jemand hat dich als Admin von %{application} eingeladen, du kannst die Einladung über den untenstehenden Link akzeptieren.
+        someone_invited_you: Sie wurden zu %{application} eingeladen. Sie können die Einladung über den folgenden Link akzeptieren.
+        someone_invited_you_as_admin: Sie wurden als Admin von %{application} eingeladen, Sie können die Einladung über den untenstehenden Link akzeptieren.
         someone_invited_you_as_private_user: Jemand hat dich als private_user von %{application} eingeladen, du kannst die Einladung über den folgenden Link akzeptieren.
         subject: Anweisungen zur Einladung
       invite_admin:
