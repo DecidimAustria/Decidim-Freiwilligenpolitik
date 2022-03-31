@@ -10,7 +10,6 @@ Solve accessibility issue of Quill Editor by setting aria-label to the buttons
 */
 
 function applyAccessibilityHacks() {
-
 	// Get ref to the toolbar, its not available through the quill api ughh
 	const query = document.getElementsByClassName('ql-toolbar');
 	if (query.length !== 1) {
@@ -25,7 +24,6 @@ function applyAccessibilityHacks() {
 	for (let i = 0; i < buttons.length; i++) {
 		const button = buttons[i];
 		const className = button.getAttribute('class').toLowerCase();
-
 		if (className.indexOf('bold') >= 0) {
 			button.setAttribute('aria-label', 'Fett formatieren');
       		button.setAttribute('title', 'Fett formatieren');

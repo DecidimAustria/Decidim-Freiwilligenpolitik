@@ -697,7 +697,7 @@ de:
       create:
         button: Folgen
         error: Beim Folgen dieses Inhalts ist ein Fehler aufgetreten.
-        participatory_space: Sie folgen <span class="show-for-sr">%{resource_name}</span>
+        participatory_space: Sie folgen dem Beteiligungsprozess
       destroy:
         button: Entfolgen
         error: Beim Entfolgen dieses Inhalts ist ein Fehler aufgetreten.
@@ -1067,15 +1067,15 @@ de:
         extended:
           debates: Online-Diskussion
           debates_explanation: Verbessern Sie die Handlungsempfehlungen, indem Sie online mit anderen diskutieren.  
-          how_to_participate: Wie nehme ich am Beteiligungsprozess "Freiwilligenpolitik mitgestalten" teil?
-          meetings: Meetings
-          meetings_explanation: Nehmen Sie an der Kick-Off Veranstaltung und/oder der Abschlusskonferenz teil.  
+          how_to_participate: Wie nehme ich an freiwilligenpolitik.mitgestalten.jetzt teil?
+          meetings: Veranstaltungen
+          meetings_explanation: Nehmen Sie an der Auftaktveranstaltung oder der Abschlusskonferenz teil. Oder organisieren Sie hier eine eigene Besprechung zum Thema. 
           more_info: Mehr Informationen
           proposals: Bewertung
           proposals_explanation: Bewerten Sie die Handlungsempfehlungen nach Dringlichkeit.
         footer_sub_hero:
           footer_sub_hero_body: Arbeiten Sie gemeinsam mit anderen Exptert:innnen und Freiwilligen an einer guten zukünftigen Freiwilligenpolitik. <br /> Beitreten, teilnehmen und mitdiskutieren.
-          footer_sub_hero_headline: Willkommen bei "Freiwilligenpolitik mitgestalten".
+          footer_sub_hero_headline: Willkommen bei freiwilligenpolitik.mitgestalten.jetzt.
           register: Registrieren
         hero:
           participate: Teilnehmen
