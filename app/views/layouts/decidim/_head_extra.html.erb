@@ -1,4 +1,14 @@
 <script>
+/*
+added Piero Chiussi
+31.3.2022
+  
+source
+https://github.com/quilljs/quill/issues/1173
+
+Solve accessibility issue of Quill Editor by setting aria-label to the buttons
+*/
+
 function applyAccessibilityHacks() {
 	// Get ref to the toolbar, its not available through the quill api ughh
 	const query = document.getElementsByClassName('ql-toolbar');
