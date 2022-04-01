@@ -49,10 +49,9 @@ module Decidim
           # the screen reader would announce the icon name which can be in
           # different language (English) than the page language which is not
           # allowed.
-          #
           title = name
-          html_properties["aria-label"] = title
-          html_properties["aria-hidden"] = true
+          html_properties.delete("aria-hidden")
+          html_properties["role"] = "presentation"
         end
   
         href = Decidim.cors_enabled ? "" : asset_pack_path("media/images/icons.svg")
