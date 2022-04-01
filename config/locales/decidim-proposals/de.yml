@@ -358,7 +358,7 @@ de:
         import: Importieren von einer anderen Komponente
         new: Neue Handlungsempfehlung
         participatory_texts: Partizipative Texte
-        show: Handlungsempfehlung anzeigen
+        show: Handlungsempfehlung mitgestalten
         title: Aktionen
       admin:
         actions:
@@ -753,7 +753,7 @@ de:
           collaborative_drafts_list: Greifen Sie auf gemeinsame Entwürfe zu
           new_proposal: Neue Handlungsempfehlung
           see_all_withdrawn: Sehen Sie sich alle zurückgezogenen Handlungsempfehlungen an
-          view_proposal: Handlungsempfehlung anzeigen
+          view_proposal: Handlungsempfehlung mitgestalten
         linked_proposals:
           proposal_votes:
             one: Abstimmung
@@ -789,7 +789,7 @@ de:
           title: Handlungsempfehlung veröffentlichen
         proposal:
           creation_date: 'Erstellt am %{date}'
-          view_proposal: Handlungsempfehlung anzeigen
+          view_proposal: Handlungsempfehlung mitgestalten
         proposals:
           empty: Es gibt noch keine Handlungsempfehlung
           empty_filters: Es gibt keine Handlungsempfehlungen mit diesem Kriterium
