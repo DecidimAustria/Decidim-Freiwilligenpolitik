@@ -49,6 +49,7 @@ module Decidim
           # the screen reader would announce the icon name which can be in
           # different language (English) than the page language which is not
           # allowed.
+          #
           title = name
           html_properties.delete("aria-hidden")
           html_properties["role"] = "presentation"
