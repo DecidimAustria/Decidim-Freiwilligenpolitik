@@ -51,8 +51,8 @@ module Decidim
           # allowed.
           #
           title = name
-          html_properties.delete("aria-hidden")
-          html_properties["role"] = "presentation"
+          html_properties["aria-label"] = title
+          html_properties["aria-hidden"] = true
         end
   
         href = Decidim.cors_enabled ? "" : asset_pack_path("media/images/icons.svg")
