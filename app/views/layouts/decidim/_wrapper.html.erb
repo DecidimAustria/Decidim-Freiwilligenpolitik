@@ -32,7 +32,7 @@ end
         <!--separates the footer from the rest of the page,
              creates a sticky footer-->
         <!-- Topbar -->
-        <header role="banner">
+        <header>
           <div class="header">
           <div class="title-bar">
             <%= link_to t("skip_button", scope: "decidim.accessibility"), url_for(anchor: "content"), class: "skip" %>
@@ -107,12 +107,12 @@ end
           </div>
           </div>
         </header>
-        <main id="content" role="main">
+        <main id="content">
           <%= display_flash_messages %>
           <%= yield %>
         </main>
       </div>
-      <footer role="contentinfo">
+      <footer>
         <%= render partial: "layouts/decidim/main_footer" %>
         <%= render partial: "layouts/decidim/mini_footer" %>
       </footer>
