@@ -278,11 +278,11 @@ h2.register_form_h3,
     border: unset;
 }
 .button--facebook.button--social--mini, .button--facebook.button--social--mini:hover {
-    background-color: 1px solid var(--facebook);
+    background-color: var(--facebook);
     border: unset;
 }
 .button--google.button--social--mini, .button--google.button--social--mini:hover {
-    background-color: 1px solid var(--google);
+    background-color: var(--google);
     border: unset;
 }
 .register__separator {
