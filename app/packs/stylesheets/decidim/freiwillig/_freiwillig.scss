@@ -132,7 +132,8 @@ div.topbar__search:not(:focus-within) button {color: #3d393c;}
     margin-right:auto;
 }
 .hero::after{display: none;}
-
+/* SUBHERO */
+div.heading2{font-weight:400;margin-bottom:0.8rem;}
 /* INFO GRAPHIK */
 .prozess_phase{
     padding: 4rem 0;
@@ -271,6 +272,18 @@ h2.register_form_h3,
 .button--google, .button--google:hover {
     background-color: unset;
     border: 1px solid var(--google);
+}
+.button--twitter.button--social--mini, .button--twitter.button--social--mini:hover {
+    background-color: 1px solid var(--twitter);
+    border: unset;
+}
+.button--facebook.button--social--mini, .button--facebook.button--social--mini:hover {
+    background-color: 1px solid var(--facebook);
+    border: unset;
+}
+.button--google.button--social--mini, .button--google.button--social--mini:hover {
+    background-color: 1px solid var(--google);
+    border: unset;
 }
 .register__separator {
     font-style:normal;
