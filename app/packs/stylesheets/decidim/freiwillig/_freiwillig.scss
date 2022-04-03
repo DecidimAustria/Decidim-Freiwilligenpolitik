@@ -258,6 +258,8 @@ h2.register_form_h3,
     background-color: unset;
     border:none;
 }
+/* PROCESS STEPS */
+.timeline__item--inactive .timeline__phase__number{color:$fontcolor;}
 /* PAGES */
 .no_underline{text-decoration:none !important;}
 
