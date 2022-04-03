@@ -3,17 +3,17 @@
     <a rel="decidim noopener"
         href="https://www.sozialministerium.at/"
         target="_blank">
-      <%= image_pack_tag("media/images/BMSGPK_Logo.png", alt: "Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz", class: "mitgestalten_logo", role: "img") %>
+      <%= image_pack_tag("media/images/BMSGPK_Logo.png", alt: "Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz", class: "mitgestalten_logo") %>
     </a>
     <a rel="decidim noopener"
         href="https://gemeinnuetzig.at/"
         target="_blank">
-      <%= image_pack_tag("media/images/IGO_Logo.png", alt: "IGO: Interessenvertretung Gemeinnütziger Organisationen", class: "mitgestalten_logo", role: "img") %>
+      <%= image_pack_tag("media/images/IGO_Logo.png", alt: "IGO: Interessenvertretung Gemeinnütziger Organisationen", class: "mitgestalten_logo") %>
     </a>
     <a rel="decidim noopener"
         href="https://partizipationsbuero.at/"
         target="_blank">
-      <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: t("layouts.decidim.footer.mitgestalten_logo"), class: "mitgestalten_logo", role: "img") %>
+      <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: t("layouts.decidim.footer.mitgestalten_logo"), class: "mitgestalten_logo") %>
     </a>
   </div>
   <div class="row">
@@ -21,12 +21,13 @@
       <a rel="decidim noopener" class="small_logo"
            href="https://decidim.org/"
            target="_blank">
-        <%= image_pack_tag("media/images/decidim-logo-mobile.svg", alt: t("layouts.decidim.footer.decidim_logo"), role: "img") %>
+        <%= image_pack_tag("media/images/decidim-logo-mobile.svg", alt: t("layouts.decidim.footer.decidim_logo")) %>
       </a>
       <a rel="license noopener" class="cc-badge small_logo"
          href="http://creativecommons.org/licenses/by-sa/4.0/"
          target="_blank">
-        <%= image_pack_tag("media/images/cc-by-sa.svg", alt: t("layouts.decidim.footer.cc_by_license"), role: "img") %>
+        <span class="show-for-sr"><%=t("layouts.decidim.footer.cc_by_license")%></span>
+        <%= image_pack_tag("media/images/cc-by-sa.svg", alt: "") %>
       </a>
       <%= t("layouts.decidim.footer.made_with_open_source").html_safe %>
     </div>
