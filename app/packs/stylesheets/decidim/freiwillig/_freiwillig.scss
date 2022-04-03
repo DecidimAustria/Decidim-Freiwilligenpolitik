@@ -52,6 +52,7 @@ strong {font-weight: bolder;}
 /* HEADER */
 .header{background:rgba(0, 0, 0, 1);}
 body.homepage .header{opacity:0.8;position:absolute;top:0;left:0;right:0;z-index:1000;}
+body.homepage .callout.flash{margin-top:80px;}
 .title-bar, .navbar{background:none;}
 .right_block{margin-left:auto;}
 nav.main-nav li, 
