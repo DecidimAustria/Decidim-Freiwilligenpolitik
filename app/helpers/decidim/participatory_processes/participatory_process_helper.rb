@@ -18,8 +18,14 @@ module Decidim
       #
       # Returns a String with the formatted dates.
       def step_dates(participatory_process_step)
-        dates = [participatory_process_step.start_date]
-        dates.map { |date| date ? localize(date.to_date, format: :default) : "?" }.join(" - ")
+        if participatory_process_step.start_date.blank?
+          dates = [participatory_process_step.end_date]
+        elsif participatory_process_step.end_date.blank?
+          dates = [participatory_process_step.start_date]
+        else
+          dates = [participatory_process_step.start_date, participatory_process_step.end_date]
+        end
+        dates.map { |date| date ? localize(date.to_date, format: :default) : "" }.join(" - ")
       end
 
       # Public: Returns the path for the participatory process cta button
