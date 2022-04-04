@@ -356,7 +356,7 @@ de:
       calendar_modal:
         calendar_url: Kalender-URL
         close_window: Fenster schließen
-        export_calendar: Kalender exportieren
+        export_calendar: Kalender abonnieren
       conference_venues: Veranstaltungsorte
       content_blocks:
         upcoming_meetings:
