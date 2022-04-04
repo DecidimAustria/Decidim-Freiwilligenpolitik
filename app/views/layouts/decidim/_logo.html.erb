@@ -1,0 +1,9 @@
+<% if organization %>
+    <% if organization.logo.attached? %>
+      <%= image_tag organization.attached_uploader(:logo).variant_path(:medium), alt: t("logo", scope: "decidim.accessibility", organization: organization.name) %>
+    <% else %>
+      <span><%= organization.name %></span>
+    <% end %>
+<% else %>
+  <%= Decidim.application_name %>
+<% end %>
