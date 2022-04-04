@@ -115,6 +115,10 @@ function applyAccessibilityHacks() {
 }
 
 $(document).ready(function(){
+    // run function te set aria-label to buttons of quill editor
     applyAccessibilityHacks();
+	// remove Title attribute of all A and SPAN elements | is an accessibility issue
+	$("a[title]").removeAttr("title");
+	$("span[title]").removeAttr("title");
 });
 </script>

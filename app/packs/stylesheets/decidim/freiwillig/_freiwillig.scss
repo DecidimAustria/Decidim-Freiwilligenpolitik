@@ -48,8 +48,11 @@ strong {font-weight: bolder;}
 .title-bar .skip{color:$linkhoverwhite;}
 .nickname{color:$fontcolor;}
 .show-for-sr{color:$fontcolor;background-color: #fff;}
+.help-text{font-style: normal;}
 /* HEADER */
 .header{background:rgba(0, 0, 0, 1);}
+body.homepage .header{opacity:0.8;position:absolute;top:0;left:0;right:0;z-index:1000;}
+body.homepage .callout.flash{margin-top:80px;}
 .title-bar, .navbar{background:none;}
 .right_block{margin-left:auto;}
 nav.main-nav li, 
@@ -133,7 +136,7 @@ div.topbar__search:not(:focus-within) button {color: #3d393c;}
 }
 .hero::after{display: none;}
 /* SUBHERO */
-div.heading2{font-weight:400;margin-bottom:0.8rem;}
+div.heading2{font-weight:400;margin-bottom:0.8rem;font-size:1.5rem;}
 /* INFO GRAPHIK */
 .prozess_phase{
     padding: 4rem 0;
@@ -256,6 +259,8 @@ h2.register_form_h3,
     background-color: unset;
     border:none;
 }
+/* PROCESS STEPS */
+.timeline__item--inactive .timeline__phase__number{color:$fontcolor;}
 /* PAGES */
 .no_underline{text-decoration:none !important;}
 
@@ -274,7 +279,7 @@ h2.register_form_h3,
     border: 1px solid var(--google);
 }
 .button--twitter.button--social--mini, .button--twitter.button--social--mini:hover {
-    background-color: 1px solid var(--twitter);
+    background-color: var(--twitter);
     border: unset;
 }
 .button--facebook.button--social--mini, .button--facebook.button--social--mini:hover {
