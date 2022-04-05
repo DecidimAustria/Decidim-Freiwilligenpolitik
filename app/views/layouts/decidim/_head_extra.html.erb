@@ -36,6 +36,7 @@ tarteaucitron.init({
     "readmoreLink": "", /* Change the default readmore link pointing to tarteaucitron.io */
     
     "mandatory": true /* Show a message about mandatory cookies */
+});
 
 <script>
 
@@ -154,10 +155,66 @@ function applyAccessibilityHacks() {
 	}
 }
 
+window.onload = function(){
+	// run function te set aria-label to buttons of quill editor
+	applyAccessibilityHacks();
+
+	const myform = document.getElementById('register-form');
+	if (myform) {
+		const fieldNames = {
+			registration_user_name: 'Ihre Name',
+			registration_user_nickname: 'Ihre Benutzername',
+			registration_user_email: "Email",
+			registration_user_password: 'Passwort',
+			registration_user_password_confirmation: 'Passwort Bestätigung ',
+			registration_user_tos_agreement: "Nutzungsbedingungen"
+		}
+		//const errorConsole = document.getElementById('error_console');
+		//const errorMSG = "ACHTUNG: In folgende Felder ist ein Fehler aufgetreten:"
+		field = Array.from(myform.elements);
+		field.forEach(i => {
+			const nameInput = i;
+			const nameInputName = fieldNames[i.id];
+			nameInput.addEventListener('input', () => {
+				nameInput.setCustomValidity('');
+				nameInput.checkValidity();
+				nameInput.className = "valid";
+				nameInput.removeAttribute("aria-invalid");
+				//nameInput.removeAttribute("aria-describedby");
+				//errorConsole.innerHTML = "";
+			});
+
+			nameInput.addEventListener('invalid', () => {
+				nameInput.setAttribute("aria-invalid",true);
+				nameInput.className = "invalid";
+				//nameInput.setAttribute("aria-describedby","error_console");
+				if(nameInput.value === '') 
+				{
+					nameInput.setCustomValidity('Bitte '+nameInputName+' eingeben');
+				} 
+				else 
+				{
+					const validityState = i.validity;
+					if(validityState.patternMismatch)
+					{
+						nameInput.setCustomValidity('Ungültige Zeichen im Feld'+nameInputName);
+					}
+					else if(validityState.typeMismatch)
+					{
+						nameInput.setCustomValidity(nameInputName+': Das Email ist nicht korrekt');
+					}
+					else if(validityState.valueMissing)
+					{
+						nameInput.setCustomValidity('Bitte akzeptieren Sie die '+nameInputName);
+					}
+				}
+			});
+		});
+	}
+}
+
 $(document).ready(function(){
-    // run function te set aria-label to buttons of quill editor
-    applyAccessibilityHacks();
-	// remove Title attribute of all A and SPAN elements | is an accessibility issue
+	// remove Title attribute of all A elements
 	$("a[title]").removeAttr("title");
 	$("span[title]").removeAttr("title");
 });
