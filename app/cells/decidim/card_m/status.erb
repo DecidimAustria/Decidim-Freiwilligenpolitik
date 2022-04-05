@@ -1,0 +1,12 @@
+<div class="card__status">
+  <ul class="card-data">
+    <% statuses.each do |status_name| %>
+      <% cardhtml = send("#{status_name}_status") %>
+      <% unless cardhtml == "" %>
+        <li class="card-data__item <%= status_name %>_status">
+          <%= cardhtml %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
