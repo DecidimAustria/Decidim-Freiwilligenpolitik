@@ -121,8 +121,8 @@ window.onload = function(){
 	const myform = document.getElementById('register-form');
 	if (myform) {
 		const fieldNames = {
-			registration_user_name: 'Name',
-			registration_user_nickname: 'Benutzername',
+			registration_user_name: 'Ihr Name',
+			registration_user_nickname: 'Ihr Benutzername',
 			registration_user_email: "Email",
 			registration_user_password: 'Passwort',
 			registration_user_password_confirmation: 'Passwort Bestätigung ',
@@ -149,7 +149,7 @@ window.onload = function(){
 				//nameInput.setAttribute("aria-describedby","error_console");
 				if(nameInput.value === '') 
 				{
-					nameInput.setCustomValidity('Bitte das Feld '+nameInputName+' eingeben');
+					nameInput.setCustomValidity('Bitte '+nameInputName+' eingeben');
 				} 
 				else 
 				{
