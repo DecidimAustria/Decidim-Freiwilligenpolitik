@@ -130,6 +130,7 @@ de:
             email_subject: Die Sitzung "%{resource_title}" wurde geschlossen
             notification_title: Die Sitzung <a href="%{resource_path}">%{resource_title}</a> wurde geschlossen.
         meeting_created:
+          button_text: Zur Besprechung anmelden
           email_intro: Die Sitzung "%{resource_title}" wurde zu "%{participatory_space_title}" hinzugefügt, welchem Sie folgen.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie "%{participatory_space_title}" folgen. Falls Sie keine solchen Benachrichtigungen mehr erhalten möchten, besuchen Sie den obigen Link.
           email_subject: Neue Sitzung zu %{participatory_space_title} hinzugefügt
@@ -355,7 +356,7 @@ de:
       calendar_modal:
         calendar_url: Kalender-URL
         close_window: Fenster schließen
-        export_calendar: Kalender exportieren
+        export_calendar: Kalender abonnieren
       conference_venues: Veranstaltungsorte
       content_blocks:
         upcoming_meetings:
@@ -402,6 +403,8 @@ de:
         calendar_modal:
           add_to_calendar: Zum Kalender hinzufügen
           apple: Zu Apple Kalender hinzufügen
+          outlook: Zu Outlook hinzufügen
+          google: Zu Google Kalender hinzufügen
           close_window: Fenster schließen
           full_details_html: Für alle Details gehen Sie zu %{link}
         count:
@@ -480,6 +483,8 @@ de:
           join: Anmelden
           leave: Registrierung abbrechen
           leave_confirmation: Sind Sie sicher dass Sie Ihre Registrierung für diese Sitzung abbrechen möchten?
+          link_available_soon: Link bald verfügbar
+          link_closed: Link geschlossen
           meeting_minutes: Sitzungsprotokolle
           no_slots_available: Keine Plätze verfügbar
           organizations: Teilnahme an Organisationen
