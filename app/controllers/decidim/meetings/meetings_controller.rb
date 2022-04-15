@@ -38,16 +38,8 @@ module Decidim
       end
 
       def index
-        return unless search.results.blank? && params.dig("filter", "date") != %w(past)
-
-        @past_meetings = search_klass.new(search_params.merge(date: %w(past)))
-
-        if @past_meetings.results.present?
-          params[:filter] ||= {}
-          params[:filter][:date] = %w(past)
-          @forced_past_meetings = true
-          @search = @past_meetings
-        end
+        search_params[:date] = nil
+        @search = search_klass.new(search_params)
       end
 
       def show
