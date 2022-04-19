@@ -38,8 +38,9 @@ module Decidim
       end
 
       def index
-        search_params[:date] = nil
-        @search = search_klass.new(search_params)
+        new_params = search_params
+        new_params.delete(:date)
+        @search = search_klass.new(new_params)
       end
 
       def show
