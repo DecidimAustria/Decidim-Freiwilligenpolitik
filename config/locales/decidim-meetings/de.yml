@@ -381,6 +381,11 @@ de:
         export_calendar: Kalender abonnieren
       conference_venues: Veranstaltungsorte
       content_blocks:
+        upcoming_events:
+          name: Bevorstehende Veranstaltungen
+          upcoming_events: Bevorstehende Treffen
+          past_events: Vergangene Treffen
+          view_all_events: Alle ansehen
         upcoming_meetings:
           name: Bevorstehende Treffen
           upcoming_meetings: Bevorstehende Treffen
