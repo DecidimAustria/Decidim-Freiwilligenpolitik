@@ -85,6 +85,25 @@ de:
             label: Art des Treffens
             values:
               in_person: Persönlich
+          category_id_eq:
+            label: Kategorie
+          closed_at_present:
+            label: Status
+            values:
+              'false': Offen
+              'true': Geschlossen
+          origin_eq:
+            label: Ursprung
+            values:
+              citizen: Bürger
+              official: Offiziell
+              user_group: Benutzergruppen
+          type_eq:
+            label: Art des Treffens
+            values:
+              hybrid: Beide
+              in_person: In Person
+              online: Online
       meeting_copies:
         create:
           error: Es gab einen Fehler beim Duplizieren dieses Meetings.
@@ -187,6 +206,7 @@ de:
           proposals_count:
             one: 'Die Besprechung kann nicht gelöscht werden, da %{count} Vorschlag mit dieser verbunden ist:'
             other: 'Die Besprechung kann nicht gelöscht werden, da %{count} Vorschläge mit dieser verbunden sind:'
+        manage_poll: Umfrage verwalten
         new: Neue Sitzung
         preview: Vorschau
         registrations: Anmeldungen
@@ -223,6 +243,7 @@ de:
             invalid: Beim Aktualisieren dieser Agenda ist ein Problem aufgetreten
             success: Agenda erfolgreich aktualisiert
         exports:
+          answers: Antworten
           meeting_comments: Kommentare
           meetings: Treffen
           registrations: Anmeldungen
@@ -282,6 +303,7 @@ de:
             registration_url_help: 'Link: Erlaubt den Teilnehmern den externen Service zu nutzen, den Sie für die Registrierung verwenden'
             select_a_meeting_type: Bitte eine Meeting-Typ auswählen
             select_a_registration_type: Bitte wählen Sie eine Registrierungsart aus
+            show_embedded_iframe_help: Soll das iframe für die Videokonferenz URL eingebettet werden? Das wird nur für wenige Services unterstützt (z.B. Youtube, Twitch...)
           index:
             title: Meetings
           new:
@@ -516,6 +538,7 @@ de:
           fields:
             closed: Geschlossen
             end_time: Endtermin
+            id: Id
             map: Karte
             official_meeting: Offizielle Besprechung
             start_time: Anfangsdatum
