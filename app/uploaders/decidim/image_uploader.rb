@@ -28,7 +28,7 @@ module Decidim
       def extension_allowlist
         begin
           Decidim.organization_settings(model).upload_allowed_file_extensions_image
-        rescue => ActiveStorage::InvariableError
+        rescue ActiveStorage::InvariableError => e
           
         end
       end
