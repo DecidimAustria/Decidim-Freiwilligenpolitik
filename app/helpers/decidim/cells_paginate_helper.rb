@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+50# frozen_string_literal: true
 
 module Decidim
     module CellsPaginateHelper
@@ -14,7 +14,7 @@ module Decidim
       end
   
       def per_page
-        params[:per_page] || Decidim::Paginable::OPTIONS.first
+        params[:per_page] || 50
       end
     end
   end
