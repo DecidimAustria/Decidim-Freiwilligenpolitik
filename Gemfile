@@ -15,6 +15,8 @@ gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-
 
 gem "bootsnap", "~> 1.3"
 
+gem "commonlit-caracal", "~> 1.7.2"
+
 gem "puma", ">= 5.0.0"
 
 gem "faker", "~> 2.14"
