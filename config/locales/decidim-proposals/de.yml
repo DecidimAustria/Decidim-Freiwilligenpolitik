@@ -850,7 +850,7 @@ de:
             description: Um validiert zu werden, müssen die Handlungsempfehlungen  %{limit} Unterstützungen erreichen
           title: 'Die Abstimmung unterliegt folgenden Regeln:'
           vote_limit:
-            description: Sie können bis zu %{limit} Handlungsempfehlungen  abstimmen.
+            description: Sie können bis zu %{limit} Stimmen vergeben.
             left: Verbleibend
             votes: Stimmen
         wizard_aside:
