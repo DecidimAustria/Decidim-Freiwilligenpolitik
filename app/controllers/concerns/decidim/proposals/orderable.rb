@@ -26,7 +26,7 @@ module Decidim
         end
 
         def default_order
-          return "position"
+          # return "position" # change default order by position instead of random
           
           if order_by_votes?
             detect_order("most_voted")
